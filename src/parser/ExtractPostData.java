@@ -13,33 +13,44 @@ import util.ReadFileBuffer;
  *
  */
 public class ExtractPostData {
+
+	
+	ArrayList<String> fileNameList;
+
+	
+	public void run(String file){
+		//listFileFolder
+	}
 	
 	
-	public ArrayList<Post> readFileToPosts(String path, String fileName){
+	private void listFilesInFolder(final File folder){
+		
+	    for (final File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	            listFilesInFolder(fileEntry);
+	        } else {
+	        	if(fileEntry.getName().indexOf(".eml")>0)
+	        		this.fileNameList.add(fileEntry.getName());
+	        }
+	    }
+	}
+	
+	private ArrayList<Post> readFileToPosts(String path, String fileName){
 		
 		ArrayList<Post> postList = new ArrayList<Post>();
-		ArrayList<String> list = ReadFileBuffer.readToBuffer(path,fileName);
+		ArrayList<String> orginalList = ReadFileBuffer.readToBuffer(path,fileName);
 		
-		for(String line: list){
-			String date = this.extractDateFromPost(line);
-			//String subject = this.extractSubjectFromPost(line);
-			String sender = this.extractSenderFromPost(line);
-			postList.add(new Post(date,"subject",sender,"content"));
-		}
+		ArrayList<String> list = scopedList(orginalList);
+		String date = this.extractDateFromPost(list);
+		String subject = this.extractSubjectFromPost(list);
+		String sender = this.extractSenderFromPost(list);
+		postList.add(new Post(date,subject,sender));
 		
 		return postList;
 	}
 	
 	
-	public String extractDateFromPost(String line){
-		
-		String[] lineParts = line.split(",");
-		return lineParts[3];
-	}
-	
-	
-	public String extractSubjectFromPost(ArrayList<String> list){
-		
+	private ArrayList<String> scopedList(ArrayList<String> list){
 		String firstMark = "ceived:";
 		
 		int start =  findLastLineOfFirstMark(list,firstMark);
@@ -47,12 +58,23 @@ public class ExtractPostData {
 		int end = findEndSeachList(list,start);
 		ArrayList<String> reversedList = reverseList(list,start,end);
 		System.out.println("reversedList.size: "+reversedList.size());
-				
-		String token = "ubject:";
+		return reversedList;
+	}
+	
+	public String extractDateFromPost(ArrayList<String> list){
+		
+		String token = "ate:";
+		int position = getLineOfToken(list,token);
+		String dateLine = list.get(position);
+		return dateLine;
+	}
+	
+	
+	private int getLineOfToken(ArrayList<String> list, String token){
 		
 		int position=0; 
-		for(int i=0;i<reversedList.size();i++){
-			String line =  reversedList.get(i); 
+		for(int i=0;i<list.size();i++){
+			String line =  list.get(i); 
 			//System.out.println(line);
 			if(line.indexOf(token)>0){
 				position=i;
@@ -60,9 +82,19 @@ public class ExtractPostData {
 			}
 		}
 		System.out.println("position:"+ position);
-		String subject = reversedList.get(position);
+		return position;
+	}
+	
+	
+	public String extractSubjectFromPost(ArrayList<String> list){
+						
+		String token = "ubject:";
 
-		String secondLine = checkNextLine(reversedList.get(position-1));
+		int position=getLineOfToken(list,token);
+		
+		String subject = list.get(position);
+
+		String secondLine = checkNextLine(list.get(position-1));
 		if(secondLine!=null){
 			System.out.println(secondLine);
 			StringBuffer buffer =  new StringBuffer();
@@ -128,21 +160,20 @@ public class ExtractPostData {
 		return position;
 	}
 	
-	public String extractSenderFromPost(String line){
+	public String extractSenderFromPost(ArrayList<String> list){
 		
-		String senderPrefixToken = "seworld-moderator@SIGSOFT.ORG"; //This email address appears before the sender address
+		String token = "rom:"; //This email address appears before the sender address
 		
-		String[] lineParts = line.split(",");
-		String content = lineParts[4];
-		int start = line.indexOf(senderPrefixToken) + senderPrefixToken.length();
-
-		return extractEmail(content,start);
+		int position = getLineOfToken(list,token);
+		String emailLine = list.get(position);
+		
+		return extractEmail(emailLine);
 	}
 
 	
-	public String extractEmail(String line, int start){
+	public String extractEmail(String line){
 		
-		int middle = line.indexOf("@",start);
+		int middle = line.indexOf("@");
 		int end = line.indexOf(" ", middle); //find next blank space after the @
 		
 		int i=0;
@@ -163,18 +194,7 @@ public class ExtractPostData {
 	
 	//----------------------------
 	
-	ArrayList<String> fileNameList;
 	
-	private void listFilesInFolder(final File folder){
-		
-	    for (final File fileEntry : folder.listFiles()) {
-	        if (fileEntry.isDirectory()) {
-	            listFilesInFolder(fileEntry);
-	        } else {
-	            this.fileNameList.add(fileEntry.getName());
-	        }
-	    }
-	}
 
 	
 	

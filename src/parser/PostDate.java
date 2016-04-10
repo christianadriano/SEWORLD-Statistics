@@ -32,9 +32,8 @@ public class PostDate {
 	public PostDate(String dateStr){
 	
 		//  3/18/2016 2:39 PM
-		dateStr = dateStr.replace("/", "-");
-		dateStr = dateStr + "-0700";
-		DateFormat df = new SimpleDateFormat("MM-dd-yyyy hh:mm a, Z", Locale.ENGLISH);
+		// Fri, 18 Mar 2016 21:39:19 +0000
+		DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
 		
 		try {
 			this.date = df.parse(dateStr);

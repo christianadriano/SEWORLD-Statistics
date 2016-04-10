@@ -28,11 +28,10 @@ public class Post {
 	/** Content of the email body */
 	String content;
 	
-	public Post(String receiveDateStr, String subject, String senderEmail, String content){
+	public Post(String receiveDateStr, String subject, String senderEmail){
 		this.receiveDate = new PostDate(receiveDateStr);
 		this.subject = subject;
 		this.senderEmail = senderEmail;
-		this.content = content;
 	}
 	
 }
