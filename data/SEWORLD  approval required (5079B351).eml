@@ -1,0 +1,176 @@
+X-Mozilla-Status: 0003
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Delivered-To: seworld.moderator@gmail.com
+Received: by 10.37.98.141 with SMTP id w135csp660653ybb;
+        Sat, 19 Mar 2016 19:26:23 -0700 (PDT)
+X-Received: by 10.140.82.146 with SMTP id h18mr32740189qgd.26.1458440783223;
+        Sat, 19 Mar 2016 19:26:23 -0700 (PDT)
+Return-Path: <SRS0+cbd665e0705c41a9=PQ=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org>
+Received: from acmsmtp01.acm.org (ACMSMTP01.acm.org. [64.238.147.78])
+        by mx.google.com with ESMTPS id c184si6456654qha.100.2016.03.19.19.26.22
+        for <seworld.moderator@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 19 Mar 2016 19:26:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of SRS0+cbd665e0705c41a9=PQ=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org designates 64.238.147.78 as permitted sender) client-ip=64.238.147.78;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of SRS0+cbd665e0705c41a9=PQ=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org designates 64.238.147.78 as permitted sender) smtp.mailfrom=SRS0+cbd665e0705c41a9=PQ=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org
+Return-Path: <owner-LISTSERV@LISTSERV.ACM.ORG>
+Received: from in-006.lax.mailroute.net
+        by acmsmtp01.acm.org (ACM Email Forwarding Service) with ESMTP id 1201603192226218841
+        for <seworld-moderator@SIGSOFT.ORG>; Sat, 19 Mar 2016 22:26:21 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-006.lax.mailroute.net (Postfix) with ESMTP id 3qSNB553Z2z12M4r
+	for <seworld-moderator@SIGSOFT.ORG>; Sun, 20 Mar 2016 02:26:21 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Received: from in-006.lax.mailroute.net ([199.89.1.9])
+	by localhost (006.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id LYnQKZmjyymR for <seworld-moderator@sigsoft.org>;
+	Sun, 20 Mar 2016 02:26:21 +0000 (UTC)
+X-Envelope-From: <owner-listserv@listserv.acm.org>
+Received: from loquat.ease.lsoft.com (loquat.ease.lsoft.com [209.119.0.170])
+	by in-006.lax.mailroute.net (Postfix) with ESMTP id 3qSNB52SkYz12Ltp
+	for <seworld-moderator@SIGSOFT.ORG>; Sun, 20 Mar 2016 02:26:21 +0000 (UTC)
+Received: from [209.119.0.174] ([209.119.0.174:62366] helo=LOIRE)
+	by camaro.dc.lsoft.com (envelope-from <owner-LISTSERV@listserv.acm.org>)
+	(ecelerity 3.6.0.39694 r(Platform:3.6.0.0)) with ESMTP
+	id 16/64-02125-C4A0EE65; Sat, 19 Mar 2016 22:26:20 -0400
+Date:         Sat, 19 Mar 2016 22:25:49 -0400
+From:         LISTSERV@LISTSERV.ACM.ORG
+Subject: SEWORLD: approval required (5079B351)
+To:           SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>
+Message-ID:   <LISTSERV%201603192225493830.7195@LISTSERV.ACM.ORG>
+X-Antivirus: avast! (VPS 160321-0, 03/21/2016), Inbound message
+X-Antivirus-Status: Clean
+
+This message  was originally  submitted by Johann.M.Schumann@NASA.GOV  to the
+SEWORLD list at LISTSERV.ACM.ORG. You can approve it using the "OK" mechanism
+(click on the link  below), ignore it, or repost an  edited copy. The message
+will expire automatically. You do not need to do anything if you just want to
+discard    it.   Please    refer   to    the   List    Owner's   Manual    at
+http://www.lsoft.com/resources/manuals.asp if  you are not familiar  with the
+"OK" mechanism. These instructions are being kept purposefully short for your
+convenience in processing large numbers of messages.
+
+To APPROVE the message:
+http://listserv.acm.org/SCRIPTS/WA-ACMLPX.CGI?OK=5079B351&L=SEWORLD
+
+----------------- Original message (ID=5079B351) (120 lines) ------------------
+Return-Path: <SRS0+a564c50e5d7dd579=PQ=nasa.gov=johann.m.schumann@srs.acm.org>
+Received: from in-003.lax.mailroute.net (003.lax.mailroute.net [199.89.1.6]) by LOIRE.EASE.LSOFT.COM (SMTPL release 1.1d) (envelope-from <SRS0+a564c50e5d7dd579=PQ=nasa.gov=johann.m.schumann@srs.acm.org>) for seworld@listserv.acm.org with TCP; Sat, 19 Mar 2016 22:25:38 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-003.lax.mailroute.net (Postfix) with ESMTP id 3qSN9F5zwpz1vnQs
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Received: from in-003.lax.mailroute.net ([199.89.1.6])
+	by localhost (003.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id BJ3HVcV9LMRh for <seworld@listserv.acm.org>;
+	Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+X-Envelope-From: <srs0+a564c50e5d7dd579=pq=nasa.gov=johann.m.schumann@srs.acm.org>
+Received: from acmsmtp02.acm.org (ACMSMTP02.acm.org [64.238.147.79])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-003.lax.mailroute.net (Postfix) with ESMTPS id 3qSN9F3TVDz1vnQY
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+Received: from in-007.lax.mailroute.net
+        by acmsmtp02.acm.org (ACM Email Forwarding Service) with ESMTP id 2201603192225324050
+        for <seworld@sigsoft.org>; Sat, 19 Mar 2016 22:25:32 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3qSN9850R9z1ltpN
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+Received: from in-007.lax.mailroute.net ([199.89.1.10])
+	by localhost (007.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id IAAleIDSDg5F for <seworld@sigsoft.org>;
+	Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+X-Envelope-From: <johann.m.schumann@nasa.gov>
+Received: from ndjsvnpf102.ndc.nasa.gov (NDJSVNPF102.ndc.nasa.gov [198.117.1.152])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3qSN983FzTz1lv88
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+Received: from ndmsppt103.ndc.nasa.gov (ndmsppt103.ndc.nasa.gov [198.117.0.68])
+	by ndjsvnpf102.ndc.nasa.gov (Postfix) with ESMTP id 5F5214005C12
+	for <seworld@sigsoft.org>; Sat, 19 Mar 2016 21:25:21 -0500 (CDT)
+Received: from NDMSCHT104.ndc.nasa.gov (ndmscht104-pub.ndc.nasa.gov [198.117.0.204])
+	by ndmsppt103.ndc.nasa.gov (8.15.0.59/8.15.0.59) with ESMTP id u2K2PL6v017983
+	for <seworld@sigsoft.org>; Sat, 19 Mar 2016 21:25:21 -0500
+Received: from [192.168.1.129] (71.139.0.128) by smtp02.ndc.nasa.gov
+ (198.117.0.204) with Microsoft SMTP Server (TLS) id 14.3.266.1; Sat, 19 Mar
+ 2016 21:25:20 -0500
+To: <seworld@sigsoft.org>
+From: Johann Schumann <Johann.M.Schumann@nasa.gov>
+Subject: Call for Participation: Survey on Model-based Software Engineering
+ and Autogenerated Code
+Message-ID: <56EE0A10.4010706@nasa.gov>
+Date: Sat, 19 Mar 2016 19:25:20 -0700
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:38.0)
+ Gecko/20100101 Thunderbird/38.6.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [71.139.0.128]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,, definitions=2016-03-20_01:,,
+ signatures=0
+
+-----------------------------------------------------------------------
+                         Call for participation
+
+           Online Survey on use of Model-Based Engineering and
+            Auto-generated Code in Safety-critical Applications
+-----------------------------------------------------------------------
+
+Model-Based Software Engineering (MBSwE) and the use of Auto-Generated Code
+(AGC) for safety-critical applications have become more and more popular.
+Typical areas include aerospace, automotive, nuclear, military, and many
+others. MBSwE with automated code generation is often considered to produce
+"code with fewer bugs and much faster".  The current focus towards 
+autonomous
+systems poses new possibilities and challenges for MBSwE and automated code
+generation.
+
+We are evaluating experiences in the use of MBSwE/AGC at NASA and other
+relevant industries.  This survey assesses the current 
+state-of-the-practice,
+advantages and disadvantages, V&V practices, and certification issues for
+safety-critical systems that use MBSwE and/or execute code that is 
+generated
+from models.
+
+
+We would appreciate it if you could participate in our online survey before
+                                          March 31st, 2016.
+The survey is located at
+                       https://www.surveymonkey.com/r/mbsweandagc
+and we estimate that it would take about 30 minutes to complete. All
+responses are anonymous, unless you specifically choose to provide personal
+information and your email address.  At completion, we will be happy to 
+send
+a copy of our report to respondents who provide their email addresses 
+during
+the survey or request the report by sending an e-mail to
+SurveyMBSwEandAGC@gmail.com.
+
+Please forward this call for participation to any and all of your 
+colleagues with
+experience in this topic.
+
+
+Thank you in advance for participating in our survey.
+
+Katerina Goseva-Popstojanova, West Virginia University 
+(Katerina.Goseva@mail.wvu.edu)
+Temesghen Kahsai, Carnegie Mellon University/NASA Ames Research Center
+              (temesghen.kahsaiazene@nasa.gov)
+Matt Knudson, NASA Ames Research Center (matt.knudson@nasa.gov)
+Noble Nkwocha, NASA Independent Verification and Validation Facility
+              (Noble.N.Nkwocha@nasa.gov)
+Johann Schumann, SGT, Inc./ NASA Ames Research Center
+              (johann.m.schumann@nasa.gov)
+
+============================================================
+To contribute to SEWORLD, send your submission to
+mailto:seworld@sigsoft.org
+
+http://www.sigsoft.org/seworld provides more
+information on SEWORLD as well as a complete archive of
+messages posted to the list.
+============================================================
+

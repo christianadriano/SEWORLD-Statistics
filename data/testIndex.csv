@@ -1,0 +1,627 @@
+SEWORLD: approval required (672FDD7E),LISTSERV@LISTSERV.ACM.ORG,SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>,3/18/2016 14:39, ,"Subject:
+SEWORLD: approval required (672FDD7E)
+From:
+LISTSERV@LISTSERV.ACM.ORG
+Date:
+3/18/2016 2:39 PM
+To:
+SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>
+
+This message  was originally submitted by  samia.bouzefrane@LECNAM.NET to the
+SEWORLD list at LISTSERV.ACM.ORG. You can approve it using the ""OK"" mechanism
+(click on the link  below), ignore it, or repost an  edited copy. The message
+will expire automatically. You do not need to do anything if you just want to
+discard    it.   Please    refer   to    the   List    Owner's   Manual    at
+http://www.lsoft.com/resources/manuals.asp if  you are not familiar  with the
+""OK"" mechanism. These instructions are being kept purposefully short for your
+convenience in processing large numbers of messages.
+
+To APPROVE the message:
+http://listserv.acm.org/SCRIPTS/WA-ACMLPX.CGI?OK=672FDD7E&L=SEWORLD
+
+----------------- Original message (ID=672FDD7E) (246 lines) ------------------
+Return-Path: <SRS0+e198affa43954e3c=PO=lecnam.net=samia.bouzefrane@srs.acm.org>
+Received: from in-001.lax.mailroute.net (001.lax.mailroute.net [199.89.1.4]) by LOIRE.EASE.LSOFT.COM (SMTPL release 1.1d) (envelope-from <SRS0+e198affa43954e3c=PO=lecnam.net=samia.bouzefrane@srs.acm.org>) for seworld@listserv.acm.org with TCP; Fri, 18 Mar 2016 17:39:27 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-001.lax.mailroute.net (Postfix) with ESMTP id 3qRdsV46ZGzgZrp
+	for <seworld@listserv.acm.org>; Fri, 18 Mar 2016 21:39:26 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Authentication-Results: 001.lax.mailroute.net (mroute_mailscanner);
+	dkim=pass (1024-bit key) header.d=cnam.onmicrosoft.com
+Received: from in-001.lax.mailroute.net ([199.89.1.4])
+	by localhost (001.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id eTHUykh3-vaN for <seworld@listserv.acm.org>;
+	Fri, 18 Mar 2016 21:39:26 +0000 (UTC)
+X-Envelope-From: <srs0+e198affa43954e3c=po=lecnam.net=samia.bouzefrane@srs.acm.org>
+Received: from acmsmtp01.acm.org (ACMSMTP01.acm.org [64.238.147.78])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-001.lax.mailroute.net (Postfix) with ESMTPS id 3qRdsV0326zgZqM
+	for <seworld@listserv.acm.org>; Fri, 18 Mar 2016 21:39:25 +0000 (UTC)
+Received: from in-007.lax.mailroute.net
+        by acmsmtp01.acm.org (ACM Email Forwarding Service) with ESMTP id 1201603181739227722
+        for <SEWORLD@SIGSOFT.ORG>; Fri, 18 Mar 2016 17:39:22 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3qRdsQ6Nk3z1ltpN
+	for <SEWORLD@SIGSOFT.ORG>; Fri, 18 Mar 2016 21:39:22 +0000 (UTC)
+Authentication-Results: 007.lax.mailroute.net (mroute_mailscanner);
+	dkim=pass (1024-bit key) header.d=cnam.onmicrosoft.com
+Received: from in-007.lax.mailroute.net ([199.89.1.10])
+	by localhost (007.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id TGWZU4VKSDr5 for <SEWORLD@sigsoft.org>;
+	Fri, 18 Mar 2016 21:39:22 +0000 (UTC)
+X-Envelope-From: <samia.bouzefrane@lecnam.net>
+Received: from emea01-db3-obe.outbound.protection.outlook.com (mail-db3on0102.outbound.protection.outlook.com [157.55.234.102])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-007.lax.mailroute.net (Postfix) with ESMTPS id 3qRdsP6NC8z1lvHS
+	for <SEWORLD@SIGSOFT.ORG>; Fri, 18 Mar 2016 21:39:21 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=CNAM.onmicrosoft.com;
+ s=selector1-Lecnam-net;
+ h=From:To:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=xqjBg7BaZjNUUPp+EAbAp9/9xiXpa7okRE4/rFDPiCg=;
+ b=RgKYJ00LsxBQr8oVqBemmf7tMeyNmZs8l0tDuuRI4u5S77hpKgHFHq0w/brKc3ixvHT4JrUYrxn99AE5dNN6U3or0jyo2QI0czMIlnVyd8k2ThBnotp+OgXmPObwptSUDjuUsQDBybN417gf/iQAdRBSfuYxPolT7+Okt30VxgI=
+Received: from HE1PR0501MB1977.eurprd05.prod.outlook.com (10.166.87.135) by
+ HE1PR0501MB1979.eurprd05.prod.outlook.com (10.166.87.137) with Microsoft SMTP
+ Server (TLS) id 15.1.443.12; Fri, 18 Mar 2016 21:39:19 +0000
+Received: from HE1PR0501MB1977.eurprd05.prod.outlook.com ([10.166.87.135]) by
+ HE1PR0501MB1977.eurprd05.prod.outlook.com ([10.166.87.135]) with mapi id
+ 15.01.0443.014; Fri, 18 Mar 2016 21:39:19 +0000
+From: BOUZEFRANE Samia <samia.bouzefrane@lecnam.net>
+To: ""SEWORLD@SIGSOFT.ORG"" <SEWORLD@SIGSOFT.ORG>
+Subject: Deadline Approaching: IEEE International Conference on Cloud and Big
+ Data Computing
+Thread-Topic: Deadline Approaching: IEEE International Conference on Cloud and
+ Big Data Computing
+Thread-Index: AQHRgV6g31Om5xtd3UykxbresLKZVA==
+Date: Fri, 18 Mar 2016 21:39:19 +0000
+Message-ID: <HE1PR0501MB1977A9E1BBEABC02BBDECB53E38C0@HE1PR0501MB1977.eurprd05.prod.outlook.com>
+Accept-Language: fr-FR, en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: SIGSOFT.ORG; dkim=none (message not signed)
+ header.d=none;SIGSOFT.ORG; dmarc=none action=none header.from=lecnam.net;
+x-originating-ip: [77.128.137.111]
+x-ms-office365-filtering-correlation-id: d8a9a3b4-f297-4ed9-be90-08d34f75c34c
+x-microsoft-exchange-diagnostics: 1;HE1PR0501MB1979;5:KowUfmyQRPAjZnnKQKlai6Zw7B83KcF3IJ+hJTBsLQNutDNiqFecOS4uGz7pYs+OIlNuN/RGzNsBTrogNZpV91aq5lKzZc6Bkcb96qC/QjMtgHF5F+pFUV2dYHGW0GAlBKlO0RWP6QDcpn6PAgWaSQ==;24:hVbibG0xzTAe5PZfDLoTGK1Er6U+RdZID5c5hCd+qCyOOeSd11XscPgOBQR6cFI1VZIIYvihwUIWtAhDAN+Gn4xWS2aMapRd5vngqaIo5BI=
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:;SRVR:HE1PR0501MB1979;
+x-microsoft-antispam-prvs: <HE1PR0501MB1979C42EF64932A656F58F1EE38C0@HE1PR0501MB1979.eurprd05.prod.outlook.com>
+x-exchange-antispam-report-test: UriScan:;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(601004)(2401047)(8121501046)(5005006)(10201501046)(3002001);SRVR:HE1PR0501MB1979;BCL:0;PCL:0;RULEID:;SRVR:HE1PR0501MB1979;
+x-forefront-prvs: 088552DE73
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(30513003)(189998001)(2900100001)(122556002)(106116001)(50986999)(54356999)(87936001)(92566002)(229853001)(86362001)(19627405001)(76576001)(5003600100002)(107886002)(2351001)(110136002)(5008740100001)(81166005)(10400500002)(2501003)(19580395003)(11100500001)(66066001)(19625215002)(3660700001)(3280700002)(33656002)(5004730100002)(16236675004)(6116002)(102836003)(3846002)(450100001)(586003)(5002640100001)(74316001)(15975445007)(77096005)(1096002)(1220700001)(2906002);DIR:OUT;SFP:1102;SCL:1;SRVR:HE1PR0501MB1979;H:HE1PR0501MB1977.eurprd05.prod.outlook.com;FPR:;SPF:None;MLV:sfv;LANG:en;
+spamdiagnosticoutput: 1:23
+spamdiagnosticmetadata: NSPM
+MIME-Version: 1.0
+X-OriginatorOrg: Lecnam.net
+X-MS-Exchange-CrossTenant-originalarrivaltime: 18 Mar 2016 21:39:19.2601
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: b323bcb4-6d58-4f25-87bf-6366c3d689af
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1PR0501MB1979
+Content-Type: text/plain; charset=""iso-8859-1""
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Extended Deadline: IEEE International Conference on Cloud and Big Data Comp=
+uting (CBDCom 2016)
+
+18-21 July 2016, Toulouse France
+http://cbdcom2016.sciencesconf.org/
+
+EXTENDED SUBMISSION DEADLINE: March 25, 2016
+
+--------------------------------------------
+
+Cloud is a virtual computing resource, which realizes self-maintenance and =
+management, usually in the form of some large server cluster, including com=
+puting servers, storage servers, bandwidth resources, etc. Cloud computing =
+is the fusion and development of grid computing, distributed computing, par=
+allel computing, utility computing, network storage technologies, virtualiz=
+ation, load balancing and other traditional computer technologies and netwo=
+rk technology. Virtualization, dynamicity and scalability, the distributed =
+mass data storage and management, as well as flexible service, are the main=
+ technologies of cloud computing. There are still many challenges in cloud =
+systems and platform, cloud computing, database, virtualization, reuse and =
+elasticity problems.
+
+Big data overall architecture consists of three layers: data storage, data =
+processing and data analysis. Data storage layer stores complex type and ma=
+ss data, data processing layer realizes real-time processing of massive dat=
+a, and only through data analysis layer, smart, in-depth and valuable infor=
+mation are got. When talking about big data, one thinks first to the 4V cha=
+racteristics of big data, namely Volumes, Variety, Velocity, and Veracity. =
+Big data processing key technology generally includes: data acquisition, da=
+ta pre-processing, data storage and data management, data analysis and mini=
+ng, big show and application (big data retrieval, data visualization, big d=
+ata applications, data security, etc.).
+
+The IEEE International Conference on Cloud and Big Data Computing is a prem=
+ier forum for researchers, practitioners, developers and users who are inte=
+rested in cloud computing and big data to explore new ideas, techniques and=
+ tools, as well as to exchange experience. Besides the latest research achi=
+evements. This conference also covers innovative commercial data management=
+ systems, innovative commercial applications of cloud computing and big dat=
+a technology, and experience in applying recent research advances to real-w=
+orld problems. After the success of IEEE CBDCom 2015, Beijing China,. CBDCo=
+m 2016 will be the second edition of the international Conference.
+
+----------------
+SCOPE AND TOPICS
+----------------
+
+The IEEE CBDCom 2016 topics include but are not limited to the following. A=
+uthors are encouraged to submit unpublished original research works in one =
+of the following topics.
+01. Big Data Algorithms, Applications and Services
+02. Big Data Mining and Analytics
+03. Big Data Processing and Querying
+04. Cloud and Big Data for Internet of Things (IoT)
+05. Government and Industrial Experiences for Cloud and Big Data
+06. Green Computing and Networking Technologies for Cloud and Big Data
+07. Software Engineering for Cloud Computing and Big Data
+08. Cloud Computing Solutions and Platforms
+09. Privacy and Security for Cloud and Big Data
+10. Big Data Visualization
+11. Big Data Education
+12. Virtualization Technologies, Cloud Data Management and Storage, Cloud R=
+esource Management and QoS
+
+---------------
+IMPORTANT DATES
+---------------
+
+Submission deadline: March 25, 2016
+Author notification: May 6, 2016
+Camera ready: May 20, 2016
+Conference: July 18 - 21, 2016
+
+----------------
+PAPER SUBMISSION
+----------------
+
+Conference papers need to be prepared according to the IEEE CPS format, 8 p=
+ages
+(http://www.ieee.org/conferences_events/conferences/publishing/templates.ht=
+ml),
+and submitted in PDF format via the EasyChair submission system
+https://easychair.org/conferences/?conf=3Dcbdcom2016
+
+-----------------
+Paper Publication
+-----------------
+
+Accepted conference papers will be published by IEEE CPS (IEEE-DL and EI in=
+dexed). At least one author of each accepted paper is required to register =
+and present their work at the conference; otherwise the paper will not be i=
+ncluded in the proceedings.
+
+Best Paper and Best Demo Awards will be presented to high quality work. Sel=
+ected papers, after further extensions and revisions, will be recommended t=
+o special issues. More details will be available soon.
+
+--------------------
+ORGANIZING COMMITTEE
+--------------------
+
+HONORARY CHAIR:
+* Mazin YOUSIF, T-Systems International, USA
+
+GENERAL CHAIRS:
+* Didier EL BAZ, LAAS-CNRS, France
+* Julien BOURGEOIS, FEMTO-ST, France
+* Christophe CERIN, University of Paris XIII, France
+
+GENERAL CO-CHAIR:
+* Carson LEUNG, University of Manitoba, Canada
+
+PROGRAM CO-CHAIRS:
+* Yinglong XIA, Huawei Research America, USA
+* Ladjel BELLATRECHE, ISAE-ENSMA, France
+* Weishan ZHANG, China University of Petroleum, Qingdao China
+
+WORKSHOPS CHAIR:
+* Wookey LEE, Inha University, South Korea
+
+Publicity Chair:
+* Samia BOUZEFRANE, CNAM, France
+* Elio MASCIARI, ICAR-CNR, Italy
+
+SPECIAL ISSUES CHAIR:
+* Mianxiong DONG, Muroran Institute of Technology, Japan
+
+LOCAL ORGANISATION COMMITTEE:
+General Chair:
+* Didier EL BAZ, LAAS-CNRS, France
+
+Committee:
+* Moussa ELKIHEL, LAAS-CNRS, France
+* Pascal BERTHOU, LAAS-CNRS, France
+* Bastien PLAZOLLES, LAAS-CNRS, France
+* Li ZHU, LAAS-CNRS, France
+* Bilal FAKIH, LAAS-CNRS, France
+Communication:
+* Brigitte DUCROCQ, LAAS-CNRS, France
+Web Site:
+* Isabelle LEFEBVRE, LAAS-CNRS, France
+Secretariat:
+* Caroline MALE, LAAS-CNRS, France
+
+Advisory Committee:
+* Mohammad S. OBAIDAT, Monmouth University, USA
+* Zhikui CHEN, Dalian University of Technology, China
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+To contribute to SEWORLD, send your submission to
+mailto:seworld@sigsoft.org
+
+http://www.sigsoft.org/seworld provides more
+information on SEWORLD as well as a complete archive of
+messages posted to the list.
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+"
+SEWORLD: approval required (5079B351),LISTSERV@LISTSERV.ACM.ORG,SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>,3/19/2016 19:25, ,"Subject:
+SEWORLD: approval required (5079B351)
+From:
+LISTSERV@LISTSERV.ACM.ORG
+Date:
+3/19/2016 7:25 PM
+To:
+SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>
+
+This message  was originally  submitted by Johann.M.Schumann@NASA.GOV  to the
+SEWORLD list at LISTSERV.ACM.ORG. You can approve it using the ""OK"" mechanism
+(click on the link  below), ignore it, or repost an  edited copy. The message
+will expire automatically. You do not need to do anything if you just want to
+discard    it.   Please    refer   to    the   List    Owner's   Manual    at
+http://www.lsoft.com/resources/manuals.asp if  you are not familiar  with the
+""OK"" mechanism. These instructions are being kept purposefully short for your
+convenience in processing large numbers of messages.
+
+To APPROVE the message:
+http://listserv.acm.org/SCRIPTS/WA-ACMLPX.CGI?OK=5079B351&L=SEWORLD
+
+----------------- Original message (ID=5079B351) (120 lines) ------------------
+Return-Path: <SRS0+a564c50e5d7dd579=PQ=nasa.gov=johann.m.schumann@srs.acm.org>
+Received: from in-003.lax.mailroute.net (003.lax.mailroute.net [199.89.1.6]) by LOIRE.EASE.LSOFT.COM (SMTPL release 1.1d) (envelope-from <SRS0+a564c50e5d7dd579=PQ=nasa.gov=johann.m.schumann@srs.acm.org>) for seworld@listserv.acm.org with TCP; Sat, 19 Mar 2016 22:25:38 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-003.lax.mailroute.net (Postfix) with ESMTP id 3qSN9F5zwpz1vnQs
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Received: from in-003.lax.mailroute.net ([199.89.1.6])
+	by localhost (003.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id BJ3HVcV9LMRh for <seworld@listserv.acm.org>;
+	Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+X-Envelope-From: <srs0+a564c50e5d7dd579=pq=nasa.gov=johann.m.schumann@srs.acm.org>
+Received: from acmsmtp02.acm.org (ACMSMTP02.acm.org [64.238.147.79])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-003.lax.mailroute.net (Postfix) with ESMTPS id 3qSN9F3TVDz1vnQY
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 02:25:37 +0000 (UTC)
+Received: from in-007.lax.mailroute.net
+        by acmsmtp02.acm.org (ACM Email Forwarding Service) with ESMTP id 2201603192225324050
+        for <seworld@sigsoft.org>; Sat, 19 Mar 2016 22:25:32 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3qSN9850R9z1ltpN
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+Received: from in-007.lax.mailroute.net ([199.89.1.10])
+	by localhost (007.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id IAAleIDSDg5F for <seworld@sigsoft.org>;
+	Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+X-Envelope-From: <johann.m.schumann@nasa.gov>
+Received: from ndjsvnpf102.ndc.nasa.gov (NDJSVNPF102.ndc.nasa.gov [198.117.1.152])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3qSN983FzTz1lv88
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 02:25:32 +0000 (UTC)
+Received: from ndmsppt103.ndc.nasa.gov (ndmsppt103.ndc.nasa.gov [198.117.0.68])
+	by ndjsvnpf102.ndc.nasa.gov (Postfix) with ESMTP id 5F5214005C12
+	for <seworld@sigsoft.org>; Sat, 19 Mar 2016 21:25:21 -0500 (CDT)
+Received: from NDMSCHT104.ndc.nasa.gov (ndmscht104-pub.ndc.nasa.gov [198.117.0.204])
+	by ndmsppt103.ndc.nasa.gov (8.15.0.59/8.15.0.59) with ESMTP id u2K2PL6v017983
+	for <seworld@sigsoft.org>; Sat, 19 Mar 2016 21:25:21 -0500
+Received: from [192.168.1.129] (71.139.0.128) by smtp02.ndc.nasa.gov
+ (198.117.0.204) with Microsoft SMTP Server (TLS) id 14.3.266.1; Sat, 19 Mar
+ 2016 21:25:20 -0500
+To: <seworld@sigsoft.org>
+From: Johann Schumann <Johann.M.Schumann@nasa.gov>
+Subject: Call for Participation: Survey on Model-based Software Engineering
+ and Autogenerated Code
+Message-ID: <56EE0A10.4010706@nasa.gov>
+Date: Sat, 19 Mar 2016 19:25:20 -0700
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:38.0)
+ Gecko/20100101 Thunderbird/38.6.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=""utf-8""; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [71.139.0.128]
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:,, definitions=2016-03-20_01:,,
+ signatures=0
+
+-----------------------------------------------------------------------
+                         Call for participation
+
+           Online Survey on use of Model-Based Engineering and
+            Auto-generated Code in Safety-critical Applications
+-----------------------------------------------------------------------
+
+Model-Based Software Engineering (MBSwE) and the use of Auto-Generated Code
+(AGC) for safety-critical applications have become more and more popular.
+Typical areas include aerospace, automotive, nuclear, military, and many
+others. MBSwE with automated code generation is often considered to produce
+""code with fewer bugs and much faster"".  The current focus towards 
+autonomous
+systems poses new possibilities and challenges for MBSwE and automated code
+generation.
+
+We are evaluating experiences in the use of MBSwE/AGC at NASA and other
+relevant industries.  This survey assesses the current 
+state-of-the-practice,
+advantages and disadvantages, V&V practices, and certification issues for
+safety-critical systems that use MBSwE and/or execute code that is 
+generated
+from models.
+
+
+We would appreciate it if you could participate in our online survey before
+                                          March 31st, 2016.
+The survey is located at
+                       https://www.surveymonkey.com/r/mbsweandagc
+and we estimate that it would take about 30 minutes to complete. All
+responses are anonymous, unless you specifically choose to provide personal
+information and your email address.  At completion, we will be happy to 
+send
+a copy of our report to respondents who provide their email addresses 
+during
+the survey or request the report by sending an e-mail to
+SurveyMBSwEandAGC@gmail.com.
+
+Please forward this call for participation to any and all of your 
+colleagues with
+experience in this topic.
+
+
+Thank you in advance for participating in our survey.
+
+Katerina Goseva-Popstojanova, West Virginia University 
+(Katerina.Goseva@mail.wvu.edu)
+Temesghen Kahsai, Carnegie Mellon University/NASA Ames Research Center
+              (temesghen.kahsaiazene@nasa.gov)
+Matt Knudson, NASA Ames Research Center (matt.knudson@nasa.gov)
+Noble Nkwocha, NASA Independent Verification and Validation Facility
+              (Noble.N.Nkwocha@nasa.gov)
+Johann Schumann, SGT, Inc./ NASA Ames Research Center
+              (johann.m.schumann@nasa.gov)
+
+============================================================
+To contribute to SEWORLD, send your submission to
+mailto:seworld@sigsoft.org
+
+http://www.sigsoft.org/seworld provides more
+information on SEWORLD as well as a complete archive of
+messages posted to the list.
+============================================================
+"
+SEWORLD: approval required (945E5CCF),LISTSERV@LISTSERV.ACM.ORG,SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>,3/20/2016 14:30, ,"Subject:
+SEWORLD: approval required (945E5CCF)
+From:
+LISTSERV@LISTSERV.ACM.ORG
+Date:
+3/20/2016 2:30 PM
+To:
+SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>
+
+This message  was originally  submitted by  mswimconf@GMAIL.COM to  the SEWORLD
+list at LISTSERV.ACM.ORG. You can approve it using the ""OK"" mechanism (click on
+the link below), ignore  it, or repost an edited copy.  The message will expire
+automatically. You do not  need to do anything if you just  want to discard it.
+Please refer to the List Owner's Manual at
+http://www.lsoft.com/resources/manuals.asp  if you  are not  familiar with  the
+""OK"" mechanism. These  instructions are being kept purposefully  short for your
+convenience in processing large numbers of messages.
+
+To APPROVE the message:
+http://listserv.acm.org/SCRIPTS/WA-ACMLPX.CGI?OK=945E5CCF&L=SEWORLD
+
+----------------- Original message (ID=945E5CCF) (201 lines) ------------------
+Return-Path: <SRS0+e2e8065ab4d42df3=PQ=gmail.com=mswimconf@srs.acm.org>
+Received: from in-001.lax.mailroute.net (001.lax.mailroute.net [199.89.1.4]) by LOIRE.EASE.LSOFT.COM (SMTPL release 1.1d) (envelope-from <SRS0+e2e8065ab4d42df3=PQ=gmail.com=mswimconf@srs.acm.org>) for seworld@listserv.acm.org with TCP; Sun, 20 Mar 2016 17:30:03 -0400
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-001.lax.mailroute.net (Postfix) with ESMTP id 3qSsYl02nYzgZRt
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 21:30:03 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Authentication-Results: 001.lax.mailroute.net (mroute_mailscanner);
+	dkim=pass (2048-bit key) header.d=gmail.com
+Received: from in-001.lax.mailroute.net ([199.89.1.4])
+	by localhost (001.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id nHncd4pXe6Qz for <seworld@listserv.acm.org>;
+	Sun, 20 Mar 2016 21:30:02 +0000 (UTC)
+X-Envelope-From: <srs0+e2e8065ab4d42df3=pq=gmail.com=mswimconf@srs.acm.org>
+Received: from acmsmtp02.acm.org (ACMSMTP02.acm.org [64.238.147.79])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-001.lax.mailroute.net (Postfix) with ESMTPS id 3qSsYk3bs1zgZZM
+	for <seworld@listserv.acm.org>; Sun, 20 Mar 2016 21:30:02 +0000 (UTC)
+Received: from in-011.lax.mailroute.net
+        by acmsmtp02.acm.org (ACM Email Forwarding Service) with ESMTP id 2201603201729583181
+        for <seworld@sigsoft.org>; Sun, 20 Mar 2016 17:29:58 -0400
+Received: from localhost (011.lax.mailroute.net [127.0.0.1])
+	by in-011.lax.mailroute.net (Postfix) with ESMTP id 3qSsYf4C1Vz1JBLV
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 21:29:58 +0000 (UTC)
+Authentication-Results: 011.lax.mailroute.net (mroute_mailscanner);
+	dkim=pass (2048-bit key) header.d=gmail.com
+Received: from in-011.lax.mailroute.net ([199.89.1.14])
+	by localhost (011.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id rA4q2xwcgjGU for <seworld@sigsoft.org>;
+	Sun, 20 Mar 2016 21:29:58 +0000 (UTC)
+Received: from mail-vk0-f49.google.com (mail-vk0-f49.google.com [209.85.213.49])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by in-011.lax.mailroute.net (Postfix) with ESMTPS id 3qSsYf2370z1JBL1
+	for <seworld@sigsoft.org>; Sun, 20 Mar 2016 21:29:58 +0000 (UTC)
+Received: by mail-vk0-f49.google.com with SMTP id k1so196746043vkb.0
+        for <seworld@sigsoft.org>; Sun, 20 Mar 2016 14:29:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to;
+        bh=OtJtmDH5KAjAs+ctmhVjRvwTBOAwQm7womqxwoEVg1Q=;
+        b=JKBkowSTcRN4yHoiciw+F0hqNPPV+pcliHFEqkWMigKVO9Lg8KkqI7uIJNe5SiNe8V
+         Sn63Wc0PCYZc2rZcdz3254ghuzaNVECOOvwonlshwgQwKXI2AjCJRITJvtCkRDhY+JK9
+         yPSMB1eK3SWGj/0l7mNs3j85qaSZH7muro8UudNuElLh00ptvnnmWpD9BWGAKxRsHzXA
+         moQdVrJUVFQgrX841sppTJpD3XrbIvSC2bcLKeWKpHqLNngxpaiIVoDzVaxSoq+zHXBH
+         yFk2KQi1DMot5G1SpFSNZyLwH/DVQyMXGgXFRewew7iFtZOu6q0xGd16hQTe08zBmnaE
+         RWSw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to;
+        bh=OtJtmDH5KAjAs+ctmhVjRvwTBOAwQm7womqxwoEVg1Q=;
+        b=mJ/gQ5Rb4l6/PLa0YbbN38TPxtZqCgTymfguw9GtV1ApWdcS22IoKVLYLNc+qY7Iyz
+         Ob3L+wAv1OdzKz5oLdrFyvwracLBqZep1FzDpjeeXRyCl/0apnX4Ve5Lmb5DHliK+IyU
+         efkFmkP4lmkXDJTKy4rXXKHEZIOlmbVpkfbyJZGidx5iS5T3RU1I6y2NnU99j1Sn+Nb0
+         AeIOjS7YfmYAqbCtN/9QDy4LaHal6fnWYae2AKz3vqvrNo+MHTHHk3NPnKq9FkPAqXJP
+         EVIRGhO3pLDpdRmN8bL37bOlnrIgy9SsM8GG8Z2MqIdzDTSUoNYFFXCSt7rYfVLVYvkV
+         mGrQ==
+X-Gm-Message-State: AD7BkJI7QcUGDb0pCoqyJ5hSLaFqLi80Y3sLk7IC5LKTjanvTIvuzav7KnB/pC1BjGW93KZ8ih//bArbMBGPxg==
+MIME-Version: 1.0
+X-Received: by 10.31.1.68 with SMTP id 65mr28770630vkb.78.1458509397411; Sun,
+ 20 Mar 2016 14:29:57 -0700 (PDT)
+Received: by 10.159.38.37 with HTTP; Sun, 20 Mar 2016 14:29:57 -0700 (PDT)
+Date: Sun, 20 Mar 2016 17:29:57 -0400
+Message-ID: <CAPLRFnjOMziMiPogFPHfgA+Yn2rrck5506W2T3zbF4EfbO4mDg@mail.gmail.com>
+Subject: [SEWorld] CFP: 19th ACM/IEEE MSWiM 2016 Conference - Malta - Nov
+ 13-17, 2016
+From: MSWiM Conf <mswimconf@gmail.com>
+To: seworld@sigsoft.org
+Content-Type: text/plain; charset=UTF-8
+
+===================================================
+
+Call-For-Papers:
+19th ACM*/IEEE*  MSWiM 2016
+Malta, Nov 13-17, 2016
+http://www.mswimconf.com/2016
+
+====================================================
+IMPORTANT: Submission deadline: May 30th, 2016
+===================================================
+
+*Pending Upon Approval
+
+
+ACM/IEEE* MSWiM 2016 is the 19th Annual International Conference on
+Modeling, Analysis and Simulation of Wireless and Mobile Systems. MSWiM
+is an international forum dedicated to in-depth discussion of Wireless
+and Mobile systems, networks, algorithms and applications, with an
+emphasis on rigorous performance evaluation. MSWiM is a highly selective
+conference with a long track record of publishing innovative ideas and
+breakthroughs. MSWiM 2016 will be held Malta, Nov 13-17, 2016
+
+Authors are encouraged to submit full papers presenting new research
+related to the theory or practice of all aspects of modeling, analysis
+and simulation of mobile and wireless systems. Submitted papers must not
+have been published elsewhere nor be currently under review by another
+conference or journal.
+
+Papers related to wireless and mobile network Modeling, Analysis,
+Design, and Simulation are solicited on, but not limited to, the
+following topics in mobile and wireless systems:
+
+    Performance evaluation and modeling
+    Analytical Models
+    Simulation languages and tools for wireless systems
+    Wireless measurements tools and experiences
+    Formal methods for analysis of wireless systems
+    Correctness, survivability and reliability evaluation
+    Mobility modeling and management
+    Models and protocols for cognitive radio networks
+    Models and protocols for autonomic, or self-* networks
+    Capacity, coverage and connectivity modeling and analysis
+    Wireless network algorithms and protocols
+    Software Defined Network
+    Services for Smart City
+    Wireless PANs, LANs
+    Ad hoc and MESH networks
+    Vehicular Ad-hoc Networks (VANET)
+    Sensor and actuator networks
+    Delay Tolerant Networks
+    Integration of wired and wireless systems
+    Pervasive computing and emerging models
+    Wireless multimedia systems
+    QoS provisioning in wireless and mobile networks
+    Security and privacy of mobile/wireless systems
+    Algorithms and protocols for energy efficient operation and power
+control
+    Mobile applications, system software and algorithms
+    RF channel modeling and analysis
+    Design methodologies
+    Tools, prototypes and testbeds
+    Parallel and distributed simulation of wireless systems
+    Wireless Communication and Mobile Networking
+    Operating systems for mobile computations
+    Programming language support for mobility
+    Resource management techniques
+    Management of mobile object systems
+
+
+
+Paper Submission and Publication:
+
+High-quality original papers are solicited. Papers must be unpublished
+and must not be submitted for publication elsewhere. All papers will be
+reviewed by Technical Program Committee members and other experts active
+in the field to ensure high quality and relevance to the conference.
+More detailed instructions for paper submission can be found at
+http://www.mswimconf.com/2016 and EDAS.
+
+Accepted papers will appear in the conference proceedings to be
+published by ACM Press.
+
+Important Dates:
+
+Paper Registration (Full list of authors, title, keywords, abstract): April
+25, 2016
+
+Paper Submission Deadline: May 30, 2016
+Notification of Acceptance: June 30, 2016
+
+
+Organizing Committee:
+
+General Co-Chair:
+    - Albert Zomaya, University of Sydney, Australia
+
+TPC Co-Chairs:
+    - Geyong Min, University of Exter, UK
+
+    - Antonio Loureiro, UFMG, Brazil
+
+Workshop Chairs:
+
+    - Perikklis Chatzimios, Alexander TEI of Thessaloniki, Greece
+
+    - SungBum Hong, Jackson State University, USA
+
+
+Tutorial Chairs:
+
+    - Thomas Begin, University Claude Bernards Lyon, France
+
+    - Jalel Ben-Othman, University Paris 13, France
+
+
+Ph.D. Forum Chair
+
+    - Bjorn Landfeldt, Lund University, Sweeden
+
+============================================================
+To contribute to SEWORLD, send your submission to
+mailto:seworld@sigsoft.org
+
+http://www.sigsoft.org/seworld provides more
+information on SEWORLD as well as a complete archive of
+messages posted to the list.
+============================================================
+
+"
