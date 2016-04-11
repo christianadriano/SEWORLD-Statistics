@@ -10,6 +10,12 @@ import java.util.Date;
  */
 public class Post {
 
+	/** Folder from which the post was extracted. It is usually the name of the tag.*/
+	String tag;
+	
+	/** The id of the post is the file name of the .eml file.*/
+	String ID;
+
 	/** Text in the subject field of the post */
 	String subject;
 		
@@ -28,10 +34,10 @@ public class Post {
 	/** Content of the email body */
 	String content;
 	
-	public Post(String receiveDateStr, String subject, String senderEmail){
-		this.receiveDate = new PostDate(receiveDateStr);
-		this.subject = subject;
-		this.senderEmail = senderEmail;
+
+	public Post(String folderPath, String fileName, String tagName) {
+		this.ID = fileName;
+		this.tag = tagName;
 	}
 	
 }

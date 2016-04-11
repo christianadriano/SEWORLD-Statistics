@@ -19,7 +19,7 @@ public class PostDate {
 	
 	Integer hour;
 	
-	Integer minute;
+	public Integer minute;
 	
 	Integer AmPm;
 	
