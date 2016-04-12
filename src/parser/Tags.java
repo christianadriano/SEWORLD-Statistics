@@ -20,10 +20,10 @@ public class Tags {
 	public static String reject_other = "reject_other";
 
 	//Accepted
-	public static String accepted_call = "accepted_call";
-	public static String accepted_journal = "accepted_journal";
-	public static String accepted_job = "accepted_job";
-	public static String accepted_other = "accepted_other";
+	public static String accept_conference = "accept_conference";
+	public static String accept_journal = "accept_journal";
+	public static String accept_job = "accept_job";
+	public static String accept_other = "accept_other";
 
 	public static HashMap<String, String> tagMap= new HashMap<String,String>();
 	
@@ -35,10 +35,10 @@ public class Tags {
 		tagMap.put(reject_duplicate,reject_duplicate);
 		tagMap.put(reject_other,reject_other);
 
-		tagMap.put(accepted_call,accepted_call);
-		tagMap.put(accepted_journal,accepted_journal);
-		tagMap.put(accepted_job,accepted_job);
-		tagMap.put(accepted_other,accepted_other);
+		tagMap.put(accept_conference,accept_conference);
+		tagMap.put(accept_journal,accept_journal);
+		tagMap.put(accept_job,accept_job);
+		tagMap.put(accept_other,accept_other);
 	}
 	
 }

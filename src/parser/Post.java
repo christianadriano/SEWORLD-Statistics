@@ -10,34 +10,59 @@ import java.util.Date;
  */
 public class Post {
 
-	/** Folder from which the post was extracted. It is usually the name of the tag.*/
+	/** Folder from which the post was extracted. It is usually the name of the tag used for moderation*/
 	String tag;
 	
 	/** The id of the post is the file name of the .eml file.*/
 	String ID;
+	
+	/** complete file path with file name */
+	String filePath;
 
 	/** Text in the subject field of the post */
 	String subject;
 		
 	/** Date when the post emailed to SEWORLD */
-	PostDate receiveDate;
-	
-	/** Tag used to moderate the post */
-	String moderationTag;
+	PostDate receivedDate;
 	
 	/** Date that post was rejected */
-	PostDate rejectDate;
+	PostDate sentDate;
 	
 	/** name and email of person who sent the post */
-	String senderEmail;
-	
-	/** Content of the email body */
-	String content;
-	
+	String subscriberEmail;
+		
 
 	public Post(String folderPath, String fileName, String tagName) {
 		this.ID = fileName;
 		this.tag = tagName;
+		this.filePath = folderPath+"//"+tagName+"//"+fileName;
+	}
+
+
+	/** For testing 
+	 * @param postFileName */
+	public Post(String postFileName) {
+		this.filePath = postFileName;
+	}
+
+
+	public void setReceivedDate(String extractDateFromPost) {
+		this.receivedDate = new PostDate(extractDateFromPost,this);
+	}
+	
+	
+	public static String header="tag,ID,subscriber Email,received Date,sent Date,post Delay";
+	
+	public String computeDelay(){
+		if ((sentDate==null) || (receivedDate==null))
+			return "-1";
+		else
+			return PostDate.computeDifferenceHours(sentDate,receivedDate).toString();
+	}
+	
+	public String toString(){
+		String TOKEN=",";
+		return tag+TOKEN+ID+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay();
 	}
 	
 }

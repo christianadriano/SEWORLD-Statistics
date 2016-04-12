@@ -18,13 +18,13 @@ public class ReadFileBuffer {
 		 * Load all lines of file into and Array of Strings 
 		 * @return ArrayList where each element has the content of a line in the file
 		 */
-		public static ArrayList<String> readToBuffer(String path, String sourceFileName){
+		public static ArrayList<String> readToBuffer(String filePath){
 
 			ArrayList<String> buffer = new ArrayList<String>();
 
 			BufferedReader log;
 			try {
-				log = new BufferedReader(new FileReader(path +sourceFileName));
+				log = new BufferedReader(new FileReader(filePath));
 				String line = null;
 				while ((line = log.readLine()) != null) {
 					buffer.add(line);
@@ -33,7 +33,7 @@ public class ReadFileBuffer {
 				return buffer;
 			} 
 			catch (Exception e) {
-				System.out.println("ERROR while processing file:" + path+sourceFileName);
+				System.out.println("ERROR while processing file:" + filePath);
 				e.printStackTrace();
 				return null;
 			}

@@ -8,7 +8,7 @@ public class PropertyManager {
 
 	private String propertiesFileName="extractor.properties";
 	
-	private String propertiesPath="C:/Users/adrianoc/Documents/GitHub/SEWORLD-Statistics/";
+	private String propertiesPath="C:/Users/adrianoc/Documents/GitHub/SEWORLD-Statistics/src/";
 	
 	public String SEWORLD_FOLDER_NAME =   "C:/seworld/statistics/"; //Default value
 	
