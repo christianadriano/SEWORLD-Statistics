@@ -25,6 +25,7 @@ public class ExtractPostData {
 		extractor.run();
 	}
 
+	String currentPostFileName;
 
 	public void run(){
 
@@ -39,6 +40,7 @@ public class ExtractPostData {
 			Iterator<String> iterID = mapPost.keySet().iterator();
 			while(iterID.hasNext()){
 				Post post = mapPost.get(iterID.next());
+				this.currentPostFileName = post.filePath;
 				post = this.readFileToPosts(post);
 				stageList.add(post);
 			}
@@ -131,9 +133,12 @@ public class ExtractPostData {
 		//System.out.println("START getLineOfToken:===============");
 		int position=0; 
 		for(int i=0;i<list.size();i++){
-			String line =  list.get(i); 
+
+			String line =  list.get(i);
+			if(line.length()>30)
+				line = line.substring(0, 30); //Only look at the first characters
 			//System.out.println(line);
-			if(line.indexOf(token)>0){
+			if(line.toUpperCase().indexOf(token.toUpperCase())>0){
 				position=i;
 				break;
 			}
@@ -183,7 +188,7 @@ public class ExtractPostData {
 		for(int i=0;i<list.size();i++){
 			String line = list.get(i);
 			//System.out.println(line);
-			if(line.indexOf(firstMark)>0){
+			if(line.toUpperCase().indexOf(firstMark.toUpperCase())>0){
 				startPosition = i;
 				//System.out.println(line);
 			}
@@ -202,13 +207,30 @@ public class ExtractPostData {
 	}
 
 	private int findEndSeachList(ArrayList<String> list,int start){
-		String token = "ontent-Type:";
 
+		String token_1 = "ontent-Type:";
+		String token_2 = "ontent-Transfer-Encoding";
+		String token_3 = "ser-agent:";
+		String token_4 = "-Mailer:";
+
+		int position_token_1 = lastPosition(list,start,token_1);
+		int position_token_2 = lastPosition(list,start,token_2);
+		int position_token_3 = lastPosition(list,start,token_3);
+		int position_token_4 = lastPosition(list,start,token_4);
+
+		int largest = position_token_1 > position_token_2 ? position_token_1 : position_token_2;
+		largest = largest > position_token_3 ? largest : position_token_3;
+		largest = largest > position_token_4 ? largest : position_token_4;
+
+		return largest;  
+	}
+
+	private int lastPosition(ArrayList<String> list,int start,String token){
 		int position=0; 
 		for(int i=start;i<list.size();i++){
 			String line =  list.get(i); 
 			//System.out.println(line);
-			if(line.indexOf(token)>0){
+			if(line.toUpperCase().indexOf(token.toUpperCase())>0){
 				position=i;
 				break;
 			}
@@ -233,13 +255,30 @@ public class ExtractPostData {
 		int middle = line.indexOf("@");
 		int end = line.indexOf(">", middle); //find next blank space after the @
 
-		int i=0;
-		while(line.charAt(middle-i)!='<'){//backtracks until it finds the beginning of the email
-			i++;
-			//System.out.print(line.charAt(i));
+		if(end<0){//Means that email has no < > delimitors, so just remove the From: and trim the content.
+			line = line.replaceAll("From:"," ");
+			line = line.trim();
+			return line;
 		}
+		else{
 
-		return line.substring(middle-i+1,end).trim();
+			int i=0;
+			try{
+				while(line.charAt(middle-i)!='<'){//backtracks until it finds the beginning of the email
+					i++;
+					//System.out.print(line.charAt(i));
+				}
+
+				return line.substring(middle-i+1,end).trim();
+			}
+			catch(Exception e){
+				System.out.println("ERROR");
+				System.out.println("File: "+ this.currentPostFileName + ", line processed: "+line);
+				e.printStackTrace();
+				System.out.println();
+				return "";
+			}
+		}
 	}
 
 	public String extractEmailBodyFromPost(String line){

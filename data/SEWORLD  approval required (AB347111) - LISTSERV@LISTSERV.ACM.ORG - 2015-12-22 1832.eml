@@ -1,0 +1,201 @@
+Delivered-To: seworld.moderator@gmail.com
+Received: by 10.55.23.148 with SMTP id 20csp3357973qkx;
+        Tue, 22 Dec 2015 18:33:11 -0800 (PST)
+X-Received: by 10.55.75.137 with SMTP id y131mr35991691qka.69.1450837991306;
+        Tue, 22 Dec 2015 18:33:11 -0800 (PST)
+Return-Path: <SRS0+50cb6819fd10f709=MY=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org>
+Received: from acmsmtp02.acm.org (ACMSMTP02.acm.org. [64.238.147.79])
+        by mx.google.com with ESMTPS id z2si37651384qkg.60.2015.12.22.18.33.11
+        for <seworld.moderator@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 22 Dec 2015 18:33:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of SRS0+50cb6819fd10f709=MY=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org designates 64.238.147.79 as permitted sender) client-ip=64.238.147.79;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of SRS0+50cb6819fd10f709=MY=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org designates 64.238.147.79 as permitted sender) smtp.mailfrom=SRS0+50cb6819fd10f709=MY=LISTSERV.ACM.ORG=owner-LISTSERV@srs.acm.org
+Return-Path: <owner-LISTSERV@LISTSERV.ACM.ORG>
+Received: from in-007.lax.mailroute.net
+        by acmsmtp02.acm.org (ACM Email Forwarding Service) with ESMTP id 2201512222133096251
+        for <seworld-moderator@SIGSOFT.ORG>; Tue, 22 Dec 2015 21:33:09 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3pQJVZ0shZz1ltk6
+	for <seworld-moderator@SIGSOFT.ORG>; Wed, 23 Dec 2015 02:33:10 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Received: from in-007.lax.mailroute.net ([199.89.1.10])
+	by localhost (007.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id 0wIyNbewe_Jn for <seworld-moderator@sigsoft.org>;
+	Wed, 23 Dec 2015 02:33:09 +0000 (UTC)
+Received: from loquat.ease.lsoft.com (loquat.ease.lsoft.com [209.119.0.170])
+	by in-007.lax.mailroute.net (Postfix) with ESMTP id 3pQJVY5NY6z1ltXc
+	for <seworld-moderator@SIGSOFT.ORG>; Wed, 23 Dec 2015 02:33:09 +0000 (UTC)
+Received: from [209.119.0.174] ([209.119.0.174:52159] helo=LOIRE)
+	by camaro.dc.lsoft.com (envelope-from <owner-LISTSERV@listserv.acm.org>)
+	(ecelerity 3.6.0.39694 r(Platform:3.6.0.0)) with ESMTP
+	id 19/DD-02125-5E70A765; Tue, 22 Dec 2015 21:33:09 -0500
+Date:         Tue, 22 Dec 2015 21:32:22 -0500
+From:         LISTSERV@LISTSERV.ACM.ORG
+Subject: SEWORLD: approval required (AB347111)
+To:           SEWORLD Moderator <seworld-moderator@SIGSOFT.ORG>
+Message-ID:   <LISTSERV%201512222132229760.5560@LISTSERV.ACM.ORG>
+X-Antivirus: avast! (VPS 151230-1, 12/30/2015), Inbound message
+X-Antivirus-Status: Clean
+
+This message was originally submitted  by borodin@CAPTIVOICE.COM to the SEWORLD
+list at LISTSERV.ACM.ORG. You can approve it using the "OK" mechanism (click on
+the link below), ignore  it, or repost an edited copy.  The message will expire
+automatically. You do not  need to do anything if you just  want to discard it.
+Please refer to the List Owner's Manual at
+http://www.lsoft.com/resources/manuals.asp  if you  are not  familiar with  the
+"OK" mechanism. These  instructions are being kept purposefully  short for your
+convenience in processing large numbers of messages.
+
+To APPROVE the message:
+http://listserv.acm.org/SCRIPTS/WA-ACMLPX.CGI?OK=AB347111&L=SEWORLD
+
+----------------- Original message (ID=AB347111) (149 lines) ------------------
+Return-Path: <SRS0+6ac163e3264785be=MY=captivoice.com=borodin@srs.acm.org>
+Received: from in-002.las.mailroute.net (002.las.mailroute.net [199.89.4.5]) by LOIRE.EASE.LSOFT.COM (SMTPL release 1.1c) (envelope-from <SRS0+6ac163e3264785be=MY=captivoice.com=borodin@srs.acm.org>) for seworld@listserv.acm.org with TCP; Tue, 22 Dec 2015 21:32:21 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-002.las.mailroute.net (Postfix) with ESMTP id 3pQJTc5Cvyz3wfP
+	for <seworld@listserv.acm.org>; Wed, 23 Dec 2015 02:32:20 +0000 (UTC)
+X-Virus-Scanned: by MailRoute
+Authentication-Results: 002.las.mailroute.net. (mroute_mailscanner);
+	dkim=pass (1024-bit key) header.d=captivoice.com
+Received: from in-002.las.mailroute.net ([199.89.4.5])
+	by localhost (002.las.mailroute.net. [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id IVoQ8RKaEJVl for <seworld@listserv.acm.org>;
+	Wed, 23 Dec 2015 02:32:20 +0000 (UTC)
+Received: from acmsmtp01.acm.org (ACMSMTP01.acm.org [64.238.147.78])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by in-002.las.mailroute.net (Postfix) with ESMTPS id 3pQJTc18Ztz3wfX
+	for <seworld@listserv.acm.org>; Wed, 23 Dec 2015 02:32:20 +0000 (UTC)
+Received: from in-006.lax.mailroute.net
+        by acmsmtp01.acm.org (ACM Email Forwarding Service) with ESMTP id 1201512222132151280
+        for <seworld@sigsoft.org>; Tue, 22 Dec 2015 21:32:15 -0500
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by in-006.lax.mailroute.net (Postfix) with ESMTP id 3pQJTW4Hhvz12M0r
+	for <seworld@sigsoft.org>; Wed, 23 Dec 2015 02:32:15 +0000 (UTC)
+Authentication-Results: 006.lax.mailroute.net (mroute_mailscanner);
+	dkim=pass (1024-bit key) header.d=captivoice.com
+Received: from in-006.lax.mailroute.net ([199.89.1.9])
+	by localhost (006.lax.mailroute.net [127.0.0.1]) (mroute_mailscanner, port 10024)
+	with LMTP id wlcWBN-SCSdE for <seworld@sigsoft.org>;
+	Wed, 23 Dec 2015 02:32:15 +0000 (UTC)
+Received: from mail.captivoice.com (mail.captivoice.com [54.208.79.136])
+	by in-006.lax.mailroute.net (Postfix) with ESMTP id 3pQJTW1spkz12M1T
+	for <seworld@sigsoft.org>; Wed, 23 Dec 2015 02:32:13 +0000 (UTC)
+Received: by mail.captivoice.com (Postfix, from userid 65534)
+	id C4EB1E62; Tue, 22 Dec 2015 18:32:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=captivoice.com;
+	s=captidkim; t=1450837931;
+	bh=WDKLczFKijCYd6clpODZiqMjOtL//HQMiyceRVJejoI=;
+	h=To:Subject:Date:From:Reply-To;
+	b=pQot0UechMSvn6arvynAzq5vGf3RklyXp5Q1b7vtPqhiI3bdSk/fsGdrQRM259qQl
+	 KRpAi1dw2il/3wutEjpxbHWQpGrMu7EGs4vBY9jIhOvcR20FFX2G4/clHRcA+5x771
+	 kttZ2hbdLzJeNukPX5jyjk9IN77evN7mYT851NEw=
+To: <seworld@sigsoft.org>
+Subject: Final Call for Papers W4A2016
+X-PHP-Originating-Script: 103:main.inc
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+Date: Tue, 22 Dec 2015 21:32:11 -0500
+From: "Yevgen Borodin, PhD" <borodin@captivoice.com>
+Reply-To: <borodin@captivoice.com>
+Mail-Reply-To: <borodin@captivoice.com>
+Message-ID: <2a518bfa36d7511dc665cfc56658048a@captivoice.com>
+X-Sender: borodin@captivoice.com
+User-Agent: Roundcube Webmail/0.8.5
+
+
+Dear Colleagues,
+
+Please notice $16K available in awards and scholarships at: W4A2016 
+April 11-13th 2016: http://w4a.info/
+
+"Education for All on the Web" is the theme for the 13th International 
+Web for All Conference. W4A2016 will be set in Montreal, Canada, 
+co-located with the 25th International World Wide Web Conference. 
+Deadline for all submissions is January 15th, 2016.
+
+*Submissions*
+Submissions should detail novel engineering solutions and scientific 
+insights into Web and Mobile technologies that impact the needs of 
+diverse learners, and may be one of the following forms:
+
+10-page technical papers (best paper award $2000),
+4-page communication papers  (best paper award $1000),
+2-page extended abstracts for the Paciello Group Web Accessibility 
+Challenge Award, and
+2-page extended abstracts for the Google Doctoral Consortium 
+competition (6 x $1000).
+10, 4, or 2 page paper for the Student Grant Award (4 x $500)
+Additional scholarships are available to students with physical 
+disabilities (2 x $2,500)
+(All accepted submissions are published to the ACM Digital Library)
+
+Paper Submission Template is available from ACM
+http://www.acm.org/publications/article-templates/proceedings-template.html/
+
+Technical and Communication papers should be submitted through the W4A 
+Submission page
+http://www.w4a.info/2016/submissions/technical-papers/
+
+Send Doctoral Consortium submissions to dc2016@w4a.info
+Send Web Accessibility Challenge submissions to cc2016@w4a.info
+
+*Topics*
+We invite you to submit your best work on improving and understanding 
+access for people across the accessibility spectrum. Areas of interest 
+this year include, but are not limited to:
+
+Accessibility challenges in Science, Technology, Engineering, and 
+Mathematics on the Web.
+Inclusive online arts and humanities learning.
+Accessible MOOCs and Web-based learning tools.
+Accessible multimedia including video, podcasts and slides.
+Web programming and coding for everyone.
+Web access to Big Data tools and data sources.
+Learning analytics to support Web accessibility for online learners.
+Personalized learning on the Web.
+Advances in accessible mobile learning technologies.
+Accessible Web maps and Web graphics.
+Removing barriers to chemistry, statistics, and mathematics on the Web.
+Access to online exhibitions and museums.
+Web collaboration and knowledge sharing.
+Barrier-free online synchronous and asynchronous communication.
+Accessible and adaptive Web-based testing and assessment.
+Accessible simulations, serious gaming, and role playing on the Web.
+
+*Keynotes*
+Jutta Treviranus, Director of the Inclusive Design Research Centre, 
+OCAD University
+Jennison Asuncion, Co-Founder, Global Accessibility Awareness Day
+
+*Registration*
+Register for W4A2016 through the WWW2016 Registration Gateway
+http://www2016.ca/registration.html
+
+*Sponsors*
+Intuit (http://www.intuit.com/)
+Google (http://www.google.com/)
+Canvas (http://www.canvaslms.com)
+IBM (http://www.ibm.com/)
+The Paciello Group (http://www.paciellogroup.com/)
+
+
+*Important dates:            	Midnight PST-8 (HST)*
+Submissions:                  	January 15
+Rebuttals:                      	February 5-12
+Decisions:                      	February 19
+Camera ready:               	March 3
+
+============================================================
+To contribute to SEWORLD, send your submission to
+mailto:seworld@sigsoft.org
+
+http://www.sigsoft.org/seworld provides more
+information on SEWORLD as well as a complete archive of
+messages posted to the list.
+============================================================
