@@ -48,7 +48,8 @@ public class ExtractPostData {
 
 		//Update post map
 		for(Post post:stageList){
-			addPost(post);
+			if(post!=null)
+				addPost(post);
 		}
 
 		printToCSV();
@@ -98,10 +99,16 @@ public class ExtractPostData {
 		ArrayList<String> orginalList = ReadFileBuffer.readToBuffer(post.filePath);
 
 		ArrayList<String> list = scopeList(orginalList);
-		post.setReceivedDate(this.extractDateFromPost(list));
-		post.subject = this.extractSubjectFromPost(list);
-		post.subscriberEmail = this.extractSenderFromPost(list);
-		return post;
+		if(list.size()>0){
+			post.setReceivedDate(this.extractDateFromPost(list));
+			post.subject = this.extractSubjectFromPost(list);
+			post.subscriberEmail = this.extractSenderFromPost(list);
+			return post;
+		}
+		else{
+			System.out.println("Null post: "+ post.filePath);
+			return null;
+		}
 	}
 
 
@@ -113,13 +120,16 @@ public class ExtractPostData {
 		int end = findEndSeachList(list,start);
 		ArrayList<String> reversedList = reverseList(list,start,end);
 		//System.out.println("reversedList.size: "+reversedList.size());
+		//System.out.println(reversedList.get(0));
 		return reversedList;
 	}
 
 	public String extractDateFromPost(ArrayList<String> list){
 
 		String token = "ate: ";//For some reason we cannot match the first letter.
-		int position = getLineOfToken(list,token);
+		
+		int position = getLineOfToken(list,token,6);
+		//System.out.println("file: "+this.currentPostFileName);
 		//System.out.println("position:"+ position);
 		String dateLine = list.get(position);
 		dateLine = dateLine.replaceAll("D"+token,"");
@@ -128,15 +138,15 @@ public class ExtractPostData {
 	}
 
 
-	private int getLineOfToken(ArrayList<String> list, String token){
+	private int getLineOfToken(ArrayList<String> list, String token, int searchLength){
 
 		//System.out.println("START getLineOfToken:===============");
 		int position=0; 
 		for(int i=0;i<list.size();i++){
 
 			String line =  list.get(i);
-			if(line.length()>30)
-				line = line.substring(0, 30); //Only look at the first characters
+			if(line.length()>searchLength)
+				line = line.substring(0, searchLength); //Only look at the first characters
 			//System.out.println(line);
 			if(line.toUpperCase().indexOf(token.toUpperCase())>0){
 				position=i;
@@ -152,11 +162,14 @@ public class ExtractPostData {
 
 		String token = "ubject:";
 
-		int position=getLineOfToken(list,token);
+	
+		int position=getLineOfToken(list,token,10);
 
 		String subject = list.get(position);
-
-		String secondLine = checkNextLine(list.get(position-1));
+		String secondLine=null;
+		if(position>0)
+			secondLine = checkNextLine(list.get(position-1));
+			
 		if(secondLine!=null){
 			//	System.out.println(secondLine);
 			StringBuffer buffer =  new StringBuffer();
@@ -187,6 +200,8 @@ public class ExtractPostData {
 		int startPosition = 0;
 		for(int i=0;i<list.size();i++){
 			String line = list.get(i);
+			if(line.length()>(firstMark.length()+2))
+				line = line.substring(0,firstMark.length()+2);//Considers only the beginning of the line.
 			//System.out.println(line);
 			if(line.toUpperCase().indexOf(firstMark.toUpperCase())>0){
 				startPosition = i;
@@ -243,7 +258,7 @@ public class ExtractPostData {
 
 		String token = "rom:"; //This email address appears before the sender address
 
-		int position = getLineOfToken(list,token);
+		int position = getLineOfToken(list,token,6);
 		String emailLine = list.get(position);
 
 		return extractEmail(emailLine);
@@ -254,30 +269,15 @@ public class ExtractPostData {
 
 		int middle = line.indexOf("@");
 		int end = line.indexOf(">", middle); //find next blank space after the @
-
-		if(end<0){//Means that email has no < > delimitors, so just remove the From: and trim the content.
+		int start = line.indexOf("<");
+		
+		if(end<0 || start<0){//Means that email has no < > delimitors, so just remove the From: and trim the content.
 			line = line.replaceAll("From:"," ");
 			line = line.trim();
 			return line;
 		}
 		else{
-
-			int i=0;
-			try{
-				while(line.charAt(middle-i)!='<'){//backtracks until it finds the beginning of the email
-					i++;
-					//System.out.print(line.charAt(i));
-				}
-
-				return line.substring(middle-i+1,end).trim();
-			}
-			catch(Exception e){
-				System.out.println("ERROR");
-				System.out.println("File: "+ this.currentPostFileName + ", line processed: "+line);
-				e.printStackTrace();
-				System.out.println();
-				return "";
-			}
+			return line.substring(start+1,end-1).trim();
 		}
 	}
 
