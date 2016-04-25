@@ -72,7 +72,7 @@ public class ExtractPostData {
 
 			for (File fileEntry : folder.listFiles()) {
 				if (!fileEntry.isDirectory() && (fileEntry.getName().indexOf(".eml")>0)){
-					System.out.println("read name:"+ fileEntry.getName());
+					//System.out.println("read name:"+ fileEntry.getName());
 					Post post = new Post(folderPath, fileEntry.getName(),tag);
 					addPost(post);
 				}

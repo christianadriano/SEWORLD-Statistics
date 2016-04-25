@@ -51,7 +51,7 @@ public class Post {
 	}
 	
 	
-	public static String header="tag,ID,subscriber Email,received Date,sent Date,post Delay";
+	public static String header="tag,ID,subscriber Email,received Date,sent Date,post Delay,received Week of Year, month of Year, Year";
 	
 	public String computeDelay(){
 		if ((sentDate==null) || (receivedDate==null))
@@ -62,7 +62,8 @@ public class Post {
 	
 	public String toString(){
 		String TOKEN=",";
-		return tag+TOKEN+ID+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay();
+		return tag+TOKEN+ID+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay()+
+				TOKEN+receivedDate.weekOfYear+TOKEN+receivedDate.month+TOKEN+receivedDate.year;
 	}
 	
 }

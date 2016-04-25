@@ -72,6 +72,7 @@ public class PostDate {
 		this.minute = calendar.get(Calendar.MINUTE);
 		this.AmPm = calendar.get(Calendar.AM_PM);
 		this.weekOfYear = calendar.get(Calendar.WEEK_OF_YEAR);
+		this.timeZone = new Integer(calendar.get(Calendar.ZONE_OFFSET)/60000).toString();
 	}
 
 
