@@ -22,13 +22,14 @@ public class ExtractPostData {
 
 	public static void main(String args[]){
 		ExtractPostData extractor =  new ExtractPostData();
-		extractor.run();
+		extractor.run("2016");
 	}
 
 	String currentPostFileName;
-
-	public void run(){
-
+	String year;
+	
+	public void run(String year){
+		this.year = year;
 		setup();
 
 		ArrayList<Post> stageList = new ArrayList<Post>(); 
@@ -60,7 +61,7 @@ public class ExtractPostData {
 		manager.initialize();
 		Tags.initialize();
 		for(String subfolder:Tags.tagMap.values()){
-			listFilesInFolder(manager.SEWORLD_FOLDER_NAME,subfolder);			
+			listFilesInFolder(manager.SEWORLD_FOLDER_NAME+"//"+this.year+"//",subfolder);			
 		}
 	}		
 
