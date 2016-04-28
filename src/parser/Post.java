@@ -26,7 +26,7 @@ public class Post {
 	PostDate receivedDate;
 	
 	/** Date that post was rejected */
-	PostDate sentDate;
+	Date sentDate;
 	
 	/** name and email of person who sent the post */
 	String subscriberEmail;
@@ -57,7 +57,7 @@ public class Post {
 		if ((sentDate==null) || (receivedDate==null))
 			return "-1";
 		else
-			return PostDate.computeDifferenceHours(sentDate,receivedDate).toString();
+			return PostDate.computeDifferenceHours(sentDate,receivedDate.date).toString();
 	}
 	
 	public String toString(){

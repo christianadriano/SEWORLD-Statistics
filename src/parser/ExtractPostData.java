@@ -272,13 +272,14 @@ public class ExtractPostData {
 		int end = line.indexOf(">", middle); //find next blank space after the @
 		int start = line.indexOf("<");
 		
-		if(end<0 || start<0){//Means that email has no < > delimitors, so just remove the From: and trim the content.
+		if(end<0 || start<0){//Means that email has no < > delimiters, so just remove the From: and trim the content.
 			line = line.replaceAll("From:"," ");
+			line = line.replace(","," ");
 			line = line.trim();
 			return line;
 		}
 		else{
-			return line.substring(start+1,end-1).trim();
+			return line.substring(start+1,end).trim();
 		}
 	}
 

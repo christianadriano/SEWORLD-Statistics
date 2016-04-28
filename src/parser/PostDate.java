@@ -78,10 +78,10 @@ public class PostDate {
 
 	 
 	
-	public static Double computeDifferenceHours(PostDate sentDate,
-			PostDate receivedDate) {
+	public static Double computeDifferenceHours(Date sentDate,
+			Date receivedDate) {
 		
-		long diffInMilliseconds = sentDate.date.getTime() - receivedDate.date.getTime();
+		long diffInMilliseconds = sentDate.getTime() - receivedDate.getTime();
 		double diffInHours =  diffInMilliseconds / (1000*60*60);
 		return diffInHours; 
 	}
