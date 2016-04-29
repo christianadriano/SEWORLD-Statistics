@@ -6,6 +6,9 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import util.PropertyManager;
 import util.ReadFileBuffer;
 
@@ -22,16 +25,15 @@ public class ExtractPostData {
 
 	public static void main(String args[]){
 		ExtractPostData extractor =  new ExtractPostData();
-		extractor.run("2016");
+		//extractor.setupModeratedPosts("2016"); 
+		extractor.setupSentPosts();
+		extractor.run();
 	}
 
 	String currentPostFileName;
 	String year;
 	
-	public void run(String year){
-		this.year = year;
-		setup();
-
+	public void run(){
 		ArrayList<Post> stageList = new ArrayList<Post>(); 
 
 		Iterator<String> iter =  this.tagPostMap.keySet().iterator();
@@ -53,16 +55,23 @@ public class ExtractPostData {
 				addPost(post);
 		}
 
-		printToCSV();
+		printToCSV(this.tagPostMap);
 	}
 
-	private void setup(){
+	public void setupModeratedPosts(String year){
 		PropertyManager manager = new PropertyManager();
 		manager.initialize();
 		Tags.initialize();
 		for(String subfolder:Tags.tagMap.values()){
-			listFilesInFolder(manager.SEWORLD_FOLDER_NAME+"//"+this.year+"//",subfolder);			
+			listFilesInFolder(manager.SEWORLD_FOLDER_NAME+"//"+year+"//",subfolder);			
 		}
+	}		
+	
+	private void setupSentPosts(){
+		PropertyManager manager = new PropertyManager();
+		manager.initialize();
+		Tags.initialize();
+		listFilesInFolder(manager.SEWORLD_FOLDER_NAME,"SentMails//Posted//");			
 	}		
 
 	private void listFilesInFolder(String folderPath, String tag){
@@ -102,6 +111,7 @@ public class ExtractPostData {
 		ArrayList<String> list = scopeList(orginalList);
 		if(list.size()>0){
 			post.setReceivedDate(this.extractDateFromPost(list));
+			post.setSentDate(this.extractResentDateFromPost(list));
 			post.subject = this.extractSubjectFromPost(list);
 			post.subscriberEmail = this.extractSenderFromPost(list);
 			return post;
@@ -117,7 +127,7 @@ public class ExtractPostData {
 		String firstMark = "ceived:";//For some reason we cannot match the first letter.
 
 		int start =  findLastLineOfFirstMark(list,firstMark);
-		//System.out.println("start: "+start);
+		//System.out.println("start: "+start+", line:"+list.get(start));
 		int end = findEndSeachList(list,start);
 		ArrayList<String> reversedList = reverseList(list,start,end);
 		//System.out.println("reversedList.size: "+reversedList.size());
@@ -137,6 +147,19 @@ public class ExtractPostData {
 		//System.out.println(dateLine);
 		return dateLine;
 	}
+	
+	public String extractResentDateFromPost(ArrayList<String> list){
+
+		String token = "esent-Date: ";//For some reason we cannot match the first letter.
+		
+		int position = getLineOfToken(list,token,15);
+		//System.out.println("file: "+this.currentPostFileName);
+		//System.out.println("position:"+ position);
+		String dateLine = list.get(position);
+		dateLine = dateLine.replaceAll("R"+token,"");//.replace(",", " ");
+		//System.out.println("Resent-Date: "+ dateLine);
+		return dateLine;
+	}
 
 
 	private int getLineOfToken(ArrayList<String> list, String token, int searchLength){
@@ -148,7 +171,7 @@ public class ExtractPostData {
 			String line =  list.get(i);
 			if(line.length()>searchLength)
 				line = line.substring(0, searchLength); //Only look at the first characters
-			//System.out.println(line);
+		//	System.out.println(line);
 			if(line.toUpperCase().indexOf(token.toUpperCase())>0){
 				position=i;
 				break;
@@ -179,7 +202,7 @@ public class ExtractPostData {
 			subject = buffer.toString();
 			//	System.out.println(subject);
 		}
-		return subject.replaceAll("S"+token," ");
+		return subject.replaceAll("S"+token," ").replace(",", " ");
 	}
 
 
@@ -228,16 +251,19 @@ public class ExtractPostData {
 		String token_2 = "ontent-Transfer-Encoding";
 		String token_3 = "ser-agent:";
 		String token_4 = "-Mailer:";
+		String token_5 = "-Antivirus-Status:";
 
 		int position_token_1 = lastPosition(list,start,token_1);
 		int position_token_2 = lastPosition(list,start,token_2);
 		int position_token_3 = lastPosition(list,start,token_3);
 		int position_token_4 = lastPosition(list,start,token_4);
+		int position_token_5 = lastPosition(list,start,token_5);
 
 		int largest = position_token_1 > position_token_2 ? position_token_1 : position_token_2;
 		largest = largest > position_token_3 ? largest : position_token_3;
 		largest = largest > position_token_4 ? largest : position_token_4;
-
+		largest = largest > position_token_5 ? largest : position_token_5;
+		
 		return largest;  
 	}
 
@@ -251,7 +277,7 @@ public class ExtractPostData {
 				break;
 			}
 		}
-		//System.out.println("position End:"+ position);
+		//System.out.println("position End:"+ position+" line: "+list.get(position));
 		return position;
 	}
 
@@ -290,17 +316,14 @@ public class ExtractPostData {
 	}
 
 
-	public ArrayList<String> getLinesToPrint(){
+	public ArrayList<String> getLinesToPrint(HashMap<String, HashMap<String, Post>> map){
 
 		ArrayList<String> linesToPrint = new ArrayList<String>();
 
-		Iterator<String> iter =  this.tagPostMap.keySet().iterator();
-		while(iter.hasNext()){
-			String tag = iter.next();
-			HashMap<String, Post> mapPost = this.tagPostMap.get(tag);
-			Iterator<String> iterID = mapPost.keySet().iterator();
-			while(iterID.hasNext()){
-				Post post = mapPost.get(iterID.next());
+		for(Map.Entry<String,HashMap<String,Post>> entry: map.entrySet()){
+			HashMap<String, Post> mapPost = entry.getValue();
+			for(Map.Entry<String,Post> entryPost: mapPost.entrySet()){
+				Post post = entryPost.getValue();
 				linesToPrint.add(post.toString());
 			}
 		}
@@ -308,12 +331,12 @@ public class ExtractPostData {
 	}
 
 
-	public void printToCSV(){
+	public void printToCSV(HashMap<String,HashMap<String,Post>> map){
 
 		String destination = "C://seworld//statistics//stats.csv";
 		BufferedWriter log;
-		ArrayList<String> linesToPrint = this.getLinesToPrint();
-
+		ArrayList<String> linesToPrint = this.getLinesToPrint(map);
+		
 		try {
 			log = new BufferedWriter(new FileWriter(destination));
 			//Print file header
@@ -335,6 +358,33 @@ public class ExtractPostData {
 
 	}
 
+	public HashMap<String,HashMap<String,Post>> appendTagPostMap(HashMap<String,HashMap<String,Post>> map){
+		int count = 0;
+		for(Entry<String, HashMap<String, Post>> entryTag: map.entrySet()){
+			count =count + entryTag.getValue().size();
+		}
+
+		for(Entry<String, HashMap<String, Post>> entryTag: this.tagPostMap.entrySet()){
+			count =count + entryTag.getValue().size();
+		}
+		
+		this.tagPostMap.putAll(map);
+		
+		int countFinal = 0;
+		for(Entry<String, HashMap<String, Post>> entryTag: this.tagPostMap.entrySet()){
+			countFinal =countFinal + entryTag.getValue().size();
+		}
+		
+		if(countFinal!=count){
+			System.out.println("Count: "+count+ ", countFinal: "+countFinal);
+		}
+		
+		return this.tagPostMap;
+	}
+	
+	
+	
+	
 	//----------------------------
 
 

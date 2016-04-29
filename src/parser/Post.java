@@ -1,7 +1,5 @@
 package parser;
 
-import java.util.Date;
-
 
 /** 
  * Represents a SEWORLD post
@@ -26,14 +24,14 @@ public class Post {
 	PostDate receivedDate;
 	
 	/** Date that post was rejected */
-	Date sentDate;
+	PostDate sentDate;
 	
 	/** name and email of person who sent the post */
 	String subscriberEmail;
 		
 
 	public Post(String folderPath, String fileName, String tagName) {
-		this.ID = fileName;
+		this.ID = fileName.replace(",", " ");
 		this.tag = tagName;
 		this.filePath = folderPath+"//"+tagName+"//"+fileName;
 	}
@@ -50,19 +48,23 @@ public class Post {
 		this.receivedDate = new PostDate(extractDateFromPost,this);
 	}
 	
+	public void setSentDate(String extractDateFromPost) {
+		this.sentDate = new PostDate(extractDateFromPost,this);
+	}
 	
-	public static String header="tag,ID,subscriber Email,received Date,sent Date,post Delay,received Week of Year, month of Year, Year";
+	
+	public static String header="tag,ID,subject,subscriber Email,received Date,sent Date,post Delay,received Week of Year, month of Year, Year";
 	
 	public String computeDelay(){
 		if ((sentDate==null) || (receivedDate==null))
 			return "-1";
 		else
-			return PostDate.computeDifferenceHours(sentDate,receivedDate.date).toString();
+			return PostDate.computeDifferenceHours(sentDate.date,receivedDate.date).toString();
 	}
 	
 	public String toString(){
 		String TOKEN=",";
-		return tag+TOKEN+ID+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay()+
+		return tag+TOKEN+ID+TOKEN+subject+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay()+
 				TOKEN+receivedDate.weekOfYear+TOKEN+receivedDate.month+TOKEN+receivedDate.year;
 	}
 	

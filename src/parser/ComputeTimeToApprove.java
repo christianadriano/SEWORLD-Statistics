@@ -13,30 +13,68 @@ import util.ReadFileBuffer;
 
 public class ComputeTimeToApprove {
 
-	//Index Approved by Subject
-
-	//Get posts that do not have SEWORLD_MODERATOR AS SENDER 
-	//
-
-	//Index the Replies by Subject
-
-	//Sender Email <Subject,Message>
 	HashMap<String,HashMap<String,SentMail>> mailMap = new 	HashMap<String,HashMap<String,SentMail>>();
 
+	String currentPostFileName;
+	
 	public static void main(String args[]){
+		
+		ComputeTimeToApprove computer = new ComputeTimeToApprove();
+		//computer.runAll();
+		computer.runByTags(Tags.accept_job);
+	}
+	
+	public void runAll(){
+
+		HashMap<String,HashMap<String,Post>> consolidatedMap = extractAllPost();
+		
+		for(Map.Entry<String,HashMap<String,Post>> entry: consolidatedMap.entrySet()){
+			HashMap<String,Post> map = updatePostSentDates(entry.getValue());
+			entry.setValue(map);
+			consolidatedMap.put(entry.getKey(), entry.getValue());		
+		}
+		
+		ExtractPostData extractor =  new ExtractPostData();
+		extractor.printToCSV(consolidatedMap);
+		
+	}
+	
+	
+	public void runByTags(String tag){
 
 		ExtractPostData extractor =  new ExtractPostData();
-		extractor.run("2016");
+		extractor.setupModeratedPosts("2016");
+		extractor.run();
+		HashMap<String,Post> postMap2016 = extractor.tagPostMap.get(tag);
+		
+		extractor =  new ExtractPostData();
+		extractor.setupModeratedPosts("2015");
+		extractor.run();
+		HashMap<String,Post> postMap2015 = extractor.tagPostMap.get(tag);
+		
 		ComputeTimeToApprove computeTimeToApprove =  new ComputeTimeToApprove();
-		computeTimeToApprove.run("2016");
-		HashMap<String,Post> postMap2016 = extractor.tagPostMap.get(Tags.accept_job);
+		computeTimeToApprove.run();
+		
+		System.out.println("Size of map 2015:"+ postMap2015.size()+", map 2016:"+ postMap2016.size());
 
-		computeTimeToApprove.run("2015");
-		HashMap<String,Post> postMap2015 = extractor.tagPostMap.get(Tags.accept_job);
-
-		HashMap<String,Post> postMap = computeTimeToApprove.appendMaps(postMap2016,postMap2015);
+		HashMap<String,Post> postMap = computeTimeToApprove.appendMaps(postMap2015,postMap2016);
 		postMap = computeTimeToApprove.updatePostSentDates(postMap);
+		HashMap<String,HashMap<String,Post>> tagPostMap = new HashMap<String,HashMap<String,Post>>();
+		tagPostMap.put(tag, postMap);
+		extractor.printToCSV(tagPostMap);
+	}
+	
 
+	public HashMap<String,HashMap<String,Post>> extractAllPost(){
+		ExtractPostData extractor =  new ExtractPostData();
+		extractor.setupModeratedPosts("2016");
+		extractor.run();
+		HashMap<String,HashMap<String,Post>> postMap2016 = extractor.tagPostMap;
+		
+		extractor.setupModeratedPosts("2015");
+		extractor.run();
+	
+		return extractor.appendTagPostMap(postMap2016);	
 	}
 
 	public HashMap<String,Post> appendMaps(HashMap<String,Post> postMap1,HashMap<String,Post> postMap2){
@@ -44,28 +82,29 @@ public class ComputeTimeToApprove {
 		return postMap1;
 	}
 
+	//-----------------------------------------------------------------------------------------------------
+	
 	public HashMap<String,Post> updatePostSentDates(HashMap<String,Post> postMap){
 		for(Map.Entry<String, Post> entry: postMap.entrySet()){
 			Post post = entry.getValue();
 			SentMail mail = this.findSentEmail(post);
 			if(mail!=null){
-				post.sentDate = mail.date;
+				post.setSentDate(mail.date.toString());
 				postMap.put(entry.getKey(),post);
 			}
 		}
 		return postMap;
 	}
 
-	String currentPostFileName;
-	String year;
+	
 
-	public void run(String year){
-		this.year = year;
+	public void run(){
+		
 		PropertyManager manager = new PropertyManager();
 		ArrayList<String> indexContentList = ReadFileBuffer.readToBuffer(manager.SEWORLD_FOLDER_NAME+"//sentMessages//index_sentMessages.csv");		
 
 		ArrayList<SentMail> messageList = loadMessages(indexContentList); 
-		printMessages(messageList);
+		//printMessages(messageList);
 		populateMap(messageList);
 	}
 
@@ -139,15 +178,14 @@ public class ComputeTimeToApprove {
 					mostSimilarSubject=subject;
 					mostSimilarSubjectDate=entry.getValue().date;
 					mostSimilarMail = entry.getValue();
-
 				}
 			}
-			System.out.println("Found! Post: "+post.subject +" same as: " +mostSimilarSubject);
-			post.sentDate = mostSimilarSubjectDate;
+			//System.out.println("Found! Post: "+post.subject +" same as: " +mostSimilarSubject);
+			post.setSentDate(mostSimilarSubjectDate.toString());
 			return mostSimilarMail;
 		}
 		else{
-			System.out.println("Did not find sentMail for: "+ post.subject);
+			System.out.println("Did not find sentMail for: "+ post.subject+" subscriberEmail:"+post.subscriberEmail);
 			return null;
 		}
 	}
