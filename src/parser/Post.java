@@ -1,5 +1,7 @@
 package parser;
 
+import java.util.Date;
+
 
 /** 
  * Represents a SEWORLD post
@@ -28,6 +30,9 @@ public class Post {
 	
 	/** name and email of person who sent the post */
 	String subscriberEmail;
+	
+	/** Copied from the sent mail files */
+	String sentMailDelay;
 		
 
 	public Post(String folderPath, String fileName, String tagName) {
@@ -48,12 +53,12 @@ public class Post {
 		this.receivedDate = new PostDate(extractDateFromPost,this);
 	}
 	
-	public void setSentDate(String extractDateFromPost) {
-		this.sentDate = new PostDate(extractDateFromPost,this);
+	public void setSentDate(Date date) {
+		this.sentDate = new PostDate(date,this);
 	}
 	
 	
-	public static String header="tag,ID,subject,subscriber Email,received Date,sent Date,post Delay,received Week of Year, month of Year, Year";
+	public static String header="tag,ID,subject,subscriber Email,received Date,sent Date,post Delay,sentMail Delay,received Week of Year, month of Year, Year";
 	
 	public String computeDelay(){
 		if ((sentDate==null) || (receivedDate==null))
@@ -64,7 +69,7 @@ public class Post {
 	
 	public String toString(){
 		String TOKEN=",";
-		return tag+TOKEN+ID+TOKEN+subject+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay()+
+		return tag+TOKEN+ID+TOKEN+subject+TOKEN+subscriberEmail+TOKEN+receivedDate+TOKEN+sentDate+TOKEN+computeDelay()+TOKEN+this.sentMailDelay+
 				TOKEN+receivedDate.weekOfYear+TOKEN+receivedDate.month+TOKEN+receivedDate.year;
 	}
 	

@@ -111,7 +111,7 @@ public class ExtractPostData {
 		ArrayList<String> list = scopeList(orginalList);
 		if(list.size()>0){
 			post.setReceivedDate(this.extractDateFromPost(list));
-			post.setSentDate(this.extractResentDateFromPost(list));
+			//post.setSentDate(this.extractResentDateFromPost(list));
 			post.subject = this.extractSubjectFromPost(list);
 			post.subscriberEmail = this.extractSenderFromPost(list);
 			return post;
@@ -257,12 +257,13 @@ public class ExtractPostData {
 		int position_token_2 = lastPosition(list,start,token_2);
 		int position_token_3 = lastPosition(list,start,token_3);
 		int position_token_4 = lastPosition(list,start,token_4);
-		int position_token_5 = lastPosition(list,start,token_5);
+	//	int position_token_5 = lastPosition(list,start,token_5);
+
 
 		int largest = position_token_1 > position_token_2 ? position_token_1 : position_token_2;
 		largest = largest > position_token_3 ? largest : position_token_3;
 		largest = largest > position_token_4 ? largest : position_token_4;
-		largest = largest > position_token_5 ? largest : position_token_5;
+	//	largest = largest > position_token_5 ? largest : position_token_5;
 		
 		return largest;  
 	}

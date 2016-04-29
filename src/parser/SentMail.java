@@ -27,17 +27,21 @@ public class SentMail {
 	
 	String receiverEmail;
 	
-	public void setDate(String dateStr){
+	String sentDelay;
+	
+	public void setSentDate(String dateStr){
 		
 		this.dateStr = dateStr;
 		
 		//System.out.println(dateStr);
 		// 3/3/2014  8:06:00 AM
-		DateFormat df = new SimpleDateFormat("m/dd/yyyy HH:mm Z", Locale.ENGLISH);
-		this.timeZome = "-0800";
+		DateFormat df = new SimpleDateFormat("EEE d MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+		//this.timeZome = "-0800";
 		
+		dateStr = trimBeginning(dateStr);
 		dateStr = dateStr.replace(',', ' ');
-		dateStr = dateStr.replace('*', ' ') + " "+ this.timeZome;
+		dateStr = trimBeginning(dateStr).substring(0,dateStr.length()-1);
+		//dateStr = dateStr.replace('*', ' ');// + " "+ this.timeZome;
 		
 		
 		try {
@@ -45,7 +49,7 @@ public class SentMail {
 			this.dateStr = df.format(date);
 			
 		} catch (ParseException e) {
-			System.out.println("Subject: "+ subject+ ",Date: "+dateStr);
+			System.out.println("Subject: "+ subject+ ", Date: "+dateStr);
 			e.printStackTrace();
 		}
 	}
@@ -87,5 +91,19 @@ public class SentMail {
 		String token = ",";
 		
 		return subject +token+senderEmail+token+receiverEmail+token+dateStr;
+	}
+	
+private String trimBeginning(String dateStr) {
+		
+		int i=0;
+		while(dateStr.charAt(i)==' ' && i<dateStr.length()){
+			i++;
+		}
+
+		if(i>0){
+			dateStr = dateStr.substring(i,dateStr.length());
+		}
+
+		return dateStr;
 	}
 }

@@ -28,6 +28,10 @@ public class PostDate {
 	
 	DateFormat format;
 	
+	public PostDate(Date date, Post post){
+		this.date = date;
+	}
+	
 	public PostDate(String dateStr, Post post){
 	
 		// Fri, 18 Mar 2016 21:39:19 +0000

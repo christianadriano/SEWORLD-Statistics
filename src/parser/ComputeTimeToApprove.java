@@ -21,7 +21,7 @@ public class ComputeTimeToApprove {
 		
 		ComputeTimeToApprove computer = new ComputeTimeToApprove();
 		//computer.runAll();
-		computer.runByTags(Tags.accept_job);
+		computer.runByTags(Tags.accept_other);
 	}
 	
 	public void runAll(){
@@ -88,8 +88,8 @@ public class ComputeTimeToApprove {
 		for(Map.Entry<String, Post> entry: postMap.entrySet()){
 			Post post = entry.getValue();
 			SentMail mail = this.findSentEmail(post);
-			if(mail!=null){
-				post.setSentDate(mail.date.toString());
+			if(mail!=null && post!=null){
+				post.setSentDate(mail.date);
 				postMap.put(entry.getKey(),post);
 			}
 		}
@@ -118,13 +118,12 @@ public class ComputeTimeToApprove {
 
 		for(String line : indexContentList){
 			String[] tokens = line.split("#");
-			if(tokens.length<4)
-				System.out.println(tokens[1]);
 			SentMail message = new SentMail();
-			message.setSubject(tokens[0]);
-			message.setSenderEmail(tokens[1]);
-			message.setReceiverEmail(tokens[2]);
-			message.setDate(tokens[3]); 
+			message.setSubject(tokens[2]);
+			message.setSenderEmail(tokens[3]);
+			//message.setReceiverEmail(tokens[2]);
+			message.setSentDate(tokens[5]); 
+			message.sentDelay = tokens[6];
 			sentList.add(message);
 		}
 
@@ -164,28 +163,32 @@ public class ComputeTimeToApprove {
 
 		CosineSimilarity cosineSimilarity = new CosineSimilarity();
 
-		if(this.mailMap.containsKey(post.subscriberEmail)){
+		if(this.mailMap.containsKey(post.subscriberEmail.trim())){
 			HashMap<String, SentMail> map = this.mailMap.get(post.subscriberEmail);
 			double similarity =0;
 			String mostSimilarSubject="";
 			Date mostSimilarSubjectDate=null;
+			String mostSimilar_sentMailDelay=null;
 			SentMail mostSimilarMail=null;
 			for(Map.Entry<String,SentMail> entry: map.entrySet()){
 				String subject = entry.getKey();
-				double index = cosineSimilarity.calculate(subject.trim(),post.subject.replace(",", " ").trim());
+				mostSimilarSubject=subject;
+				double index = cosineSimilarity.calculate(subject.trim(),post.subject.replace(",", " "));
 				if(index>similarity){
 					similarity=index;
 					mostSimilarSubject=subject;
 					mostSimilarSubjectDate=entry.getValue().date;
 					mostSimilarMail = entry.getValue();
+					mostSimilar_sentMailDelay = entry.getValue().sentDelay.replace(",", " ");
 				}
 			}
-			//System.out.println("Found! Post: "+post.subject +" same as: " +mostSimilarSubject);
-			post.setSentDate(mostSimilarSubjectDate.toString());
+			System.out.println("Found! Post: "+post.subject +" same as: " +mostSimilarSubject);
+			post.setSentDate(mostSimilarSubjectDate);
+			post.sentMailDelay = mostSimilar_sentMailDelay;
 			return mostSimilarMail;
 		}
 		else{
-			System.out.println("Did not find sentMail for: "+ post.subject+" subscriberEmail:"+post.subscriberEmail);
+			System.out.println("Did not find sentMail for: "+ post.subject+", subscriberEmail:"+post.subscriberEmail);
 			return null;
 		}
 	}
